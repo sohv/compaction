@@ -1,0 +1,10 @@
+# one yaml per experiment. seeds the defaults of the Config dataclass in src/utils/config.py.
+# precedence: explicit CLI flag > this file > dataclass default.
+# uv run -m scripts.run_generation --config_path configs/example_experiment.yaml
+
+model_id: claude-sonnet-4-6
+dataset_path: data/processed/prompts.jsonl
+output_dir: results/raw/250612_example_v1
+num_tasks: 10
+n_repeats: 1
+seed: 42
