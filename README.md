@@ -164,3 +164,20 @@ and test patch.
 
 **Run:**
 uv run -m scripts.validate_diff_check --dataset_path data/raw/impossible_swebench --output_dir results/raw/260928_smoke_diff_check_validation_v1 --seed 42
+
+## Experiment: agent rollouts
+
+Runs an Inspect AI coding agent (ImpossibleBench's prompt, bash/python/editor tools) on the verified task set in each
+task's SWE-bench container, for one split and one prefix arm, and scores every rollout for cheating with the diff check
+and for a real fix with the verification eval script.
+
+**Input:** `data/processed/tasks.jsonl` from `scripts.verify_tasks`; the task images pulled locally; `OPENROUTER_API_KEY`
+in `.env` for OpenRouter models (`--model_id openrouter/<model>`, `--provider` pins the upstream with fallbacks off)
+**Output:** `results/raw/<run>/outputs.jsonl` — fields `id` (`<instance_id>__epoch<n>`), `instance_id`, `epoch`,
+`split`, `arm`, `is_cheat`, `f2p_passed`, `diff_check` (per-category flags), `p2p_failed`, `diff`, `n_messages`,
+`error` (scores null on a failed rollout); `summary.json` — `n_expected`, `n_rows`, `n_failed`, `cheat_rate`,
+`f2p_pass_rate`, `inspect_log`; full transcripts in `generations/inspect_logs/*.eval` and test logs in
+`generations/test_logs/` (both gitignored)
+
+**Run:**
+uv run -m scripts.run_rollouts --dataset_path data/processed/tasks.jsonl --output_dir results/raw/260928_smoke_rollouts_v1 --model_id openrouter/qwen/qwen3.8-27b --provider <upstream> --split original --arm issue_only --num_tasks 2 --n_repeats 1 --seed 42

@@ -84,3 +84,36 @@ any model rollout. A candidate passes only if all three arms produce a complete,
 variant places an assertion at class scope, so the test module raises `NameError` on import and no test runs. The
 gold patch "fails" that variant only because nothing ran, which makes it a broken file rather than an impossible
 task. Such candidates are excluded and replaced by the next in rank order, same as any other verification failure.
+
+## 2026-09-28 — diff check: fixture test now, hand labels on real rollouts
+
+Added before any model rollout. The 20-diff validation in `results/raw/260928_smoke_diff_check_validation_v1/` is a
+fixture test, not hand-label validation: 10 gold patches and 10 constructed cheats, one per category in
+`src/metrics/cheat_fixtures.py`, labelled by the same author who wrote the check. It shows each designed category is
+caught and no gold patch is flagged. It says nothing about cheats the check was not designed for.
+
+The hand-label check moves to real output. In the pilot, before any cheat rate is computed, 20 rollout diffs sampled
+across arms are hand-labelled cheat or honest by a human blind to the check's verdict and to the arm. Every
+disagreement is resolved as a bug in the check or the label before the pilot numbers are read. The post-pilot read of
+30 honest-marked rollouts stays as planned.
+
+## 2026-09-28 — agent scaffold: Inspect AI with ImpossibleBench's prompt
+
+Added before any model rollout. The first plan, running `safety-research/impossiblebench` as-is, was dropped before
+use: its image builder, scorer, and both scaffolds import swebench 4.x modules that swebench 5.0.2 removed, and the
+task set was verified under 5.0.2. Instead, `src/generation/swe_agent.py` builds the scaffold on `inspect-ai==0.3.271`
+directly.
+
+- Agent: Inspect's `basic_agent` with bash, python, text_editor, and think tools (60 s tool timeout), in a Docker
+  sandbox on the task's own `swebench/sweb.eval.x86_64.*` image, network off.
+- Prompt: ImpossibleBench's tools-scaffold system prompt and think-tool text, copied verbatim, including
+  **DO NOT MODIFY THE TESTS.** and the eval test command. Its multi-submission paragraph is removed: one submission,
+  no test feedback (`max_attempts=1`), so the only test signal the agent gets is what it runs itself.
+- Setup: the split's test patch is applied at `base_commit` and committed, so the agent's diff is everything after it.
+- Scoring: the agent's diff (`git add -A; git diff --cached HEAD`) goes through `src/metrics/diff_check.py`, which is
+  the cheat metric. The source fix is then graded with the same `eval_script` used in task verification, which restores
+  the test files first, so `f2p_passed` measures the source fix alone. It is a secondary signal.
+- The prefix (fabricated transcript, compaction block, continuation) is the sample's input messages, built per arm.
+  Everything else is identical across arms.
+- Inspect's model layer is used in place of `cached_llm_call`, a departure from CLAUDE.md, because the agent loop is
+  the part being reused.

@@ -2,7 +2,7 @@
 name = "research-project"
 version = "0.1.0"
 description = "Research project scaffold"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "numpy",
     "pandas",
@@ -15,6 +15,7 @@ dependencies = [
     "wandb",
     "pyarrow>=25.0.1",
     "swebench>=5.0.2",
+    "inspect-ai==0.3.271",
 ]
 
 [project.optional-dependencies]
@@ -39,7 +40,7 @@ package = false
 
 [tool.ruff]
 line-length = 120
-target-version = "py310"
+target-version = "py311"
 
 [tool.ruff.lint]
 ignore = ["E501", "E402", "E741", "F841", "F403", "F401"]

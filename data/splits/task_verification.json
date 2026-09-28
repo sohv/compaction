@@ -1,0 +1,2892 @@
+{
+  "selected": [
+    "sympy__sympy-21612",
+    "sympy__sympy-24443",
+    "scikit-learn__scikit-learn-13124",
+    "sympy__sympy-13480",
+    "matplotlib__matplotlib-25960",
+    "sphinx-doc__sphinx-9602",
+    "django__django-15375",
+    "sympy__sympy-22914",
+    "scikit-learn__scikit-learn-13328",
+    "sympy__sympy-16450",
+    "astropy__astropy-7671",
+    "sympy__sympy-13372",
+    "sphinx-doc__sphinx-9698",
+    "django__django-11239",
+    "sphinx-doc__sphinx-10466",
+    "sympy__sympy-15976",
+    "scikit-learn__scikit-learn-14141",
+    "django__django-15572",
+    "django__django-11740",
+    "scikit-learn__scikit-learn-14894",
+    "sympy__sympy-16886",
+    "sphinx-doc__sphinx-10323",
+    "matplotlib__matplotlib-23412",
+    "matplotlib__matplotlib-26291",
+    "pytest-dev__pytest-10051",
+    "pytest-dev__pytest-6202",
+    "scikit-learn__scikit-learn-10908",
+    "pydata__xarray-6461",
+    "pydata__xarray-4629",
+    "scikit-learn__scikit-learn-12585"
+  ],
+  "n_passed": 35,
+  "results": [
+    {
+      "id": "sympy__sympy-21612",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_Mul"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_Mul"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_Mul"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sympy__sympy-24443",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_homomorphism"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_homomorphism"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_homomorphism"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-13124",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/model_selection/tests/test_split.py::test_shuffle_stratifiedkfold"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/model_selection/tests/test_split.py::test_shuffle_stratifiedkfold"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/model_selection/tests/test_split.py::test_shuffle_stratifiedkfold"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sympy__sympy-13480",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_coth"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_coth"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_coth"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-11141",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "Migration directories without an __init__.py file are loaded."
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "Migration directories without an __init__.py file are loaded."
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": false,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "Migration directories without an __init__.py file are loaded."
+        ],
+        "p2p_failed": [
+          "test_apply (migrations.test_loader.RecorderTests)",
+          "test_invalid (migrations.test_loader.PycLoaderTests)",
+          "test_valid (migrations.test_loader.PycLoaderTests)",
+          "test_check_consistent_history (migrations.test_loader.LoaderTests)",
+          "test_check_consistent_history_squashed (migrations.test_loader.LoaderTests)",
+          "test_explicit_missing_module (migrations.test_loader.LoaderTests)",
+          "test_first (migrations.test_loader.LoaderTests)",
+          "Files prefixed with underscore, tilde, or dot aren't loaded.",
+          "test_load (migrations.test_loader.LoaderTests)",
+          "test_load_empty_dir (migrations.test_loader.LoaderTests)",
+          "test_load_import_error (migrations.test_loader.LoaderTests)",
+          "test_load_module_file (migrations.test_loader.LoaderTests)",
+          "test_load_unmigrated_dependency (migrations.test_loader.LoaderTests)",
+          "Tests loading a squashed migration",
+          "Tests loading a complex set of squashed migrations",
+          "test_loading_squashed_complex_multi_apps (migrations.test_loader.LoaderTests)",
+          "test_loading_squashed_complex_multi_apps_partially_applied (migrations.test_loader.LoaderTests)",
+          "Tests loading a complex but erroneous set of squashed migrations",
+          "Tests loading a squashed migration with a new migration referencing it",
+          "test_marked_as_migrated (migrations.test_loader.LoaderTests)",
+          "test_marked_as_unmigrated (migrations.test_loader.LoaderTests)",
+          "Tests prefix name matching",
+          "test_plan_handles_repeated_migrations (migrations.test_loader.LoaderTests)",
+          "test_run_before (migrations.test_loader.LoaderTests)"
+        ]
+      },
+      "passes": false
+    },
+    {
+      "id": "matplotlib__matplotlib-25960",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/matplotlib/tests/test_figure.py::test_subfigures_wspace_hspace"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "lib/matplotlib/tests/test_figure.py::test_subfigures_wspace_hspace"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/matplotlib/tests/test_figure.py::test_subfigures_wspace_hspace"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-9602",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_parse_annotation_Literal"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_domain_py.py::test_parse_annotation_Literal"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_parse_annotation_Literal"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-15375",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_aggregation_default_after_annotation (aggregation.tests.AggregateTestCase)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_aggregation_default_after_annotation (aggregation.tests.AggregateTestCase)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_aggregation_default_after_annotation (aggregation.tests.AggregateTestCase)"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sympy__sympy-22914",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_PythonCodePrinter"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_PythonCodePrinter"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_PythonCodePrinter"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-13328",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/linear_model/tests/test_huber.py::test_huber_bool"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/linear_model/tests/test_huber.py::test_huber_bool"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/linear_model/tests/test_huber.py::test_huber_bool"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-8265",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_pycode_ast.py::test_unparse[(1,"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_pycode_ast.py::test_unparse[(1,"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_pycode_ast.py::test_unparse[(1,"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": [
+          "tests/test_pycode_ast.py::test_unparse[a"
+        ]
+      },
+      "passes": false
+    },
+    {
+      "id": "django__django-12050",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_iterable_lookup_value (queries.test_query.TestQuery)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_iterable_lookup_value (queries.test_query.TestQuery)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": false,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_iterable_lookup_value (queries.test_query.TestQuery)"
+        ],
+        "p2p_failed": [
+          "test_clone_select_related (queries.test_query.TestQuery)",
+          "test_complex_query (queries.test_query.TestQuery)",
+          "test_foreign_key (queries.test_query.TestQuery)",
+          "test_foreign_key_exclusive (queries.test_query.TestQuery)",
+          "test_foreign_key_f (queries.test_query.TestQuery)",
+          "test_multiple_fields (queries.test_query.TestQuery)",
+          "test_negated_nullable (queries.test_query.TestQuery)",
+          "test_simple_query (queries.test_query.TestQuery)",
+          "test_simplecol_query (queries.test_query.TestQuery)",
+          "test_transform (queries.test_query.TestQuery)"
+        ]
+      },
+      "passes": false
+    },
+    {
+      "id": "sympy__sympy-16450",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_posify"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_posify"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_posify"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "astropy__astropy-7671",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "astropy/utils/tests/test_introspection.py::test_minversion"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "astropy/utils/tests/test_introspection.py::test_minversion"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "astropy/utils/tests/test_introspection.py::test_minversion"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-14999",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_rename_model_with_db_table_noop (migrations.test_operations.OperationTests)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_rename_model_with_db_table_noop (migrations.test_operations.OperationTests)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": false,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_rename_model_with_db_table_noop (migrations.test_operations.OperationTests)"
+        ],
+        "p2p_failed": [
+          "test_references_model_mixin (migrations.test_operations.TestCreateModel)",
+          "test_reference_field_by_through_fields (migrations.test_operations.FieldOperationTests)",
+          "test_references_field_by_from_fields (migrations.test_operations.FieldOperationTests)",
+          "test_references_field_by_name (migrations.test_operations.FieldOperationTests)",
+          "test_references_field_by_remote_field_model (migrations.test_operations.FieldOperationTests)",
+          "test_references_field_by_through (migrations.test_operations.FieldOperationTests)",
+          "test_references_field_by_to_fields (migrations.test_operations.FieldOperationTests)",
+          "test_references_model (migrations.test_operations.FieldOperationTests)",
+          "Tests the AddField operation.",
+          "The CreateTable operation ignores swapped models.",
+          "Tests the DeleteModel operation ignores swapped models.",
+          "Add/RemoveIndex operations ignore swapped models.",
+          "Tests the AddField operation on TextField/BinaryField.",
+          "Tests the AddField operation on TextField.",
+          "test_add_constraint (migrations.test_operations.OperationTests)",
+          "test_add_constraint_combinable (migrations.test_operations.OperationTests)",
+          "test_add_constraint_percent_escaping (migrations.test_operations.OperationTests)",
+          "test_add_covering_unique_constraint (migrations.test_operations.OperationTests)",
+          "test_add_deferred_unique_constraint (migrations.test_operations.OperationTests)",
+          "Tests the AddField operation with a ManyToManyField.",
+          "Tests the AddField operation's state alteration",
+          "test_add_func_index (migrations.test_operations.OperationTests)",
+          "test_add_func_unique_constraint (migrations.test_operations.OperationTests)",
+          "Test the AddIndex operation.",
+          "test_add_index_state_forwards (migrations.test_operations.OperationTests)",
+          "test_add_or_constraint (migrations.test_operations.OperationTests)",
+          "test_add_partial_unique_constraint (migrations.test_operations.OperationTests)",
+          "Tests the AlterField operation.",
+          "AlterField operation is a noop when adding only a db_column and the",
+          "test_alter_field_m2m (migrations.test_operations.OperationTests)",
+          "Tests the AlterField operation on primary keys (for things like PostgreSQL's SERIAL weirdness)",
+          "Tests the AlterField operation on primary keys changes any FKs pointing to it.",
+          "test_alter_field_pk_mti_fk (migrations.test_operations.OperationTests)",
+          "If AlterField doesn't reload state appropriately, the second AlterField",
+          "test_alter_field_reloads_state_on_fk_with_to_field_related_name_target_type_change (migrations.test_operations.OperationTests)",
+          "test_alter_field_reloads_state_on_fk_with_to_field_target_type_change (migrations.test_operations.OperationTests)",
+          "test_alter_field_with_func_index (migrations.test_operations.OperationTests)",
+          "test_alter_field_with_func_unique_constraint (migrations.test_operations.OperationTests)",
+          "Test AlterField operation with an index to ensure indexes created via",
+          "Creating and then altering an FK works correctly",
+          "Altering an FK to a non-FK works (#23244)",
+          "Tests the AlterIndexTogether operation.",
+          "test_alter_index_together_remove (migrations.test_operations.OperationTests)",
+          "test_alter_index_together_remove_with_unique_together (migrations.test_operations.OperationTests)",
+          "The managers on a model are set.",
+          "Tests the AlterModelOptions operation.",
+          "The AlterModelOptions operation removes keys from the dict (#23121)",
+          "Tests the AlterModelTable operation.",
+          "AlterModelTable should rename auto-generated M2M tables.",
+          "Tests the AlterModelTable operation if the table name is set to None.",
+          "Tests the AlterModelTable operation if the table name is not changed.",
+          "Tests the AlterOrderWithRespectTo operation.",
+          "Tests the AlterUniqueTogether operation.",
+          "test_alter_unique_together_remove (migrations.test_operations.OperationTests)",
+          "A field may be migrated from AutoField to BigAutoField.",
+          "Column names that are SQL keywords shouldn't cause problems when used",
+          "Tests the CreateModel operation.",
+          "Tests the CreateModel operation on a multi-table inheritance setup.",
+          "Test the creation of a model with a ManyToMany field and the",
+          "test_create_model_with_constraint (migrations.test_operations.OperationTests)",
+          "test_create_model_with_deferred_unique_constraint (migrations.test_operations.OperationTests)",
+          "test_create_model_with_duplicate_base (migrations.test_operations.OperationTests)",
+          "test_create_model_with_duplicate_field_name (migrations.test_operations.OperationTests)",
+          "test_create_model_with_duplicate_manager_name (migrations.test_operations.OperationTests)",
+          "test_create_model_with_partial_unique_constraint (migrations.test_operations.OperationTests)",
+          "Tests the CreateModel operation directly followed by an",
+          "CreateModel ignores proxy models.",
+          "CreateModel ignores unmanaged models.",
+          "Tests the DeleteModel operation.",
+          "test_delete_mti_model (migrations.test_operations.OperationTests)",
+          "Tests the DeleteModel operation ignores proxy models.",
+          "A model with BigAutoField can be created.",
+          "test_remove_constraint (migrations.test_operations.OperationTests)",
+          "test_remove_covering_unique_constraint (migrations.test_operations.OperationTests)",
+          "test_remove_deferred_unique_constraint (migrations.test_operations.OperationTests)",
+          "Tests the RemoveField operation.",
+          "test_remove_field_m2m (migrations.test_operations.OperationTests)",
+          "test_remove_field_m2m_with_through (migrations.test_operations.OperationTests)",
+          "Tests the RemoveField operation on a foreign key.",
+          "test_remove_func_index (migrations.test_operations.OperationTests)",
+          "test_remove_func_unique_constraint (migrations.test_operations.OperationTests)",
+          "Test the RemoveIndex operation.",
+          "test_remove_index_state_forwards (migrations.test_operations.OperationTests)",
+          "test_remove_partial_unique_constraint (migrations.test_operations.OperationTests)",
+          "Tests the RenameField operation.",
+          "test_rename_field_case (migrations.test_operations.OperationTests)",
+          "If RenameField doesn't reload state appropriately, the AlterField",
+          "test_rename_field_with_db_column (migrations.test_operations.OperationTests)",
+          "RenameModel renames a many-to-many column after a RenameField.",
+          "test_rename_m2m_target_model (migrations.test_operations.OperationTests)",
+          "test_rename_m2m_through_model (migrations.test_operations.OperationTests)",
+          "test_rename_missing_field (migrations.test_operations.OperationTests)",
+          "Tests the RenameModel operation.",
+          "RenameModel operations shouldn't trigger the caching of rendered apps",
+          "test_rename_model_with_m2m (migrations.test_operations.OperationTests)",
+          "Tests the RenameModel operation on model with self referential FK.",
+          "test_rename_model_with_self_referential_m2m (migrations.test_operations.OperationTests)",
+          "Tests the RenameModel operation on a model which has a superclass that",
+          "test_rename_referenced_field_state_forward (migrations.test_operations.OperationTests)",
+          "test_repoint_field_m2m (migrations.test_operations.OperationTests)",
+          "Tests the RunPython operation",
+          "Tests the RunPython operation correctly handles the \"atomic\" keyword",
+          "#24098 - Tests no-op RunPython operations.",
+          "#24282 - Model changes to a FK reverse side update the model",
+          "Tests the RunSQL operation.",
+          "test_run_sql_add_missing_semicolon_on_collect_sql (migrations.test_operations.OperationTests)",
+          "#24098 - Tests no-op RunSQL operations.",
+          "#23426 - RunSQL should accept parameters.",
+          "#23426 - RunSQL should fail when a list of statements with an incorrect",
+          "Tests the SeparateDatabaseAndState operation.",
+          "A complex SeparateDatabaseAndState operation: Multiple operations both",
+          "A field may be migrated from SmallAutoField to AutoField.",
+          "A field may be migrated from SmallAutoField to BigAutoField."
+        ]
+      },
+      "passes": false
+    },
+    {
+      "id": "sympy__sympy-13372",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_evalf_bugs"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_evalf_bugs"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_evalf_bugs"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-9698",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_pymethod_options"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_domain_py.py::test_pymethod_options"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_pymethod_options"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-11239",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_ssl_certificate (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_ssl_certificate (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_ssl_certificate (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-10466",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_build_gettext.py::test_Catalog_duplicated_message"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_build_gettext.py::test_Catalog_duplicated_message"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_build_gettext.py::test_Catalog_duplicated_message"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-14915",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_choice_value_hash (model_forms.test_modelchoicefield.ModelChoiceFieldTests)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_choice_value_hash (model_forms.test_modelchoicefield.ModelChoiceFieldTests)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": false,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_choice_value_hash (model_forms.test_modelchoicefield.ModelChoiceFieldTests)"
+        ],
+        "p2p_failed": [
+          "test_basics (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choice_iterator_passes_model_to_widget (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices_bool (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices_bool_empty_label (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices_freshness (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices_not_fetched_when_not_rendering (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_choices_radio_blank (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_clean_model_instance (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_clean_to_field_name (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_custom_choice_iterator_passes_model_to_widget (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_deepcopies_widget (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_disabled_modelchoicefield (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_disabled_modelchoicefield_has_changed (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_disabled_modelchoicefield_initial_model_instance (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_disabled_modelmultiplechoicefield_has_changed (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_disabled_multiplemodelchoicefield (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "ModelChoiceField with RadioSelect widget doesn't produce unnecessary",
+          "Widgets that render multiple subwidgets shouldn't make more than one",
+          "Iterator defaults to ModelChoiceIterator and can be overridden with",
+          "test_queryset_manager (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_queryset_none (model_forms.test_modelchoicefield.ModelChoiceFieldTests)",
+          "test_result_cache_not_shared (model_forms.test_modelchoicefield.ModelChoiceFieldTests)"
+        ]
+      },
+      "passes": false
+    },
+    {
+      "id": "sympy__sympy-15976",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_presentation_symbol"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_presentation_symbol"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_presentation_symbol"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-14141",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/utils/tests/test_show_versions.py::test_get_deps_info"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/utils/tests/test_show_versions.py::test_get_deps_info"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/utils/tests/test_show_versions.py::test_get_deps_info"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-15572",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_template_dirs_ignore_empty_path (template_tests.test_autoreloader.TemplateReloadTests)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_template_dirs_ignore_empty_path (template_tests.test_autoreloader.TemplateReloadTests)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_template_dirs_ignore_empty_path (template_tests.test_autoreloader.TemplateReloadTests)"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "django__django-11740",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_alter_field_to_fk_dependency_other_app (migrations.test_autodetector.AutodetectorTests)"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_alter_field_to_fk_dependency_other_app (migrations.test_autodetector.AutodetectorTests)"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_alter_field_to_fk_dependency_other_app (migrations.test_autodetector.AutodetectorTests)"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-14894",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/svm/tests/test_svm.py::test_sparse_fit_support_vectors_empty"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/svm/tests/test_svm.py::test_sparse_fit_support_vectors_empty"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/svm/tests/test_svm.py::test_sparse_fit_support_vectors_empty"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sympy__sympy-16886",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_encode_morse"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "test_encode_morse"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "test_encode_morse"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-10323",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_directive_code.py::test_LiteralIncludeReader_dedent_and_append_and_prepend"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_directive_code.py::test_LiteralIncludeReader_dedent_and_append_and_prepend"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_directive_code.py::test_LiteralIncludeReader_dedent_and_append_and_prepend"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "matplotlib__matplotlib-23412",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/matplotlib/tests/test_patches.py::test_dash_offset_patch_draw[png]"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "lib/matplotlib/tests/test_patches.py::test_dash_offset_patch_draw[png]"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/matplotlib/tests/test_patches.py::test_dash_offset_patch_draw[png]"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "matplotlib__matplotlib-26291",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "pytest-dev__pytest-10051",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "testing/logging/test_fixture.py::test_clear_for_call_stage"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "testing/logging/test_fixture.py::test_clear_for_call_stage"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "testing/logging/test_fixture.py::test_clear_for_call_stage"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "pytest-dev__pytest-6202",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "testing/test_collection.py::Test_genitems::test_example_items1"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "testing/test_collection.py::Test_genitems::test_example_items1"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "testing/test_collection.py::Test_genitems::test_example_items1"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-10908",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/feature_extraction/tests/test_text.py::test_feature_names"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/feature_extraction/tests/test_text.py::test_feature_names"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/feature_extraction/tests/test_text.py::test_feature_names"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "pydata__xarray-6461",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_computation.py::test_where_attrs"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "xarray/tests/test_computation.py::test_where_attrs"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_computation.py::test_where_attrs"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "pydata__xarray-4629",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy"
+        ],
+        "p2p_failed": [
+          "xarray/tests/test_merge.py::TestMergeInternals::test_broadcast_dimension_size",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_datasets",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_dataarray_unnamed",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs_default",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[no_conflicts-var1_attrs0-var2_attrs0-expected_attrs0-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[no_conflicts-var1_attrs1-var2_attrs1-expected_attrs1-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[no_conflicts-var1_attrs2-var2_attrs2-expected_attrs2-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[no_conflicts-var1_attrs3-var2_attrs3-expected_attrs3-True]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[drop-var1_attrs4-var2_attrs4-expected_attrs4-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[identical-var1_attrs5-var2_attrs5-expected_attrs5-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[identical-var1_attrs6-var2_attrs6-expected_attrs6-True]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[override-var1_attrs7-var2_attrs7-expected_attrs7-False]",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_dicts_simple",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_dicts_dims",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_error",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_alignment_error",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_wrong_input_error",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_no_conflicts_single_var",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_no_conflicts_multi_var",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_no_conflicts_preserve_attrs",
+          "xarray/tests/test_merge.py::TestMergeFunction::test_merge_no_conflicts_broadcast",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_broadcast_equals",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_compat",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_auto_align",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[fill_value0]",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[2]",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[2.0]",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[fill_value3]",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_no_conflicts",
+          "xarray/tests/test_merge.py::TestMergeMethod::test_merge_dataarray"
+        ]
+      },
+      "passes": true
+    },
+    {
+      "id": "scikit-learn__scikit-learn-12585",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/tests/test_base.py::test_clone_estimator_types"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "sklearn/tests/test_base.py::test_clone_estimator_types"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "sklearn/tests/test_base.py::test_clone_estimator_types"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-8638",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_info_field_list_var"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_domain_py.py::test_info_field_list_var"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_domain_py.py::test_info_field_list_var"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-10449",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "sphinx-doc__sphinx-9281",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_util_inspect.py::test_object_description_enum"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "tests/test_util_inspect.py::test_object_description_enum"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "tests/test_util_inspect.py::test_object_description_enum"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    },
+    {
+      "id": "pydata__xarray-6721",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data"
+        ],
+        "p2p_failed": [
+          "xarray/tests/test_dataset.py::TestDataset::test_repr",
+          "xarray/tests/test_dataset.py::TestDataset::test_repr_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_repr_period_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_unicode_data",
+          "xarray/tests/test_dataset.py::TestDataset::test_repr_nep18",
+          "xarray/tests/test_dataset.py::TestDataset::test_info",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_invalid_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_1d",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_0d",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_auto_align",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_pandas_sequence",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_pandas_single",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_compat",
+          "xarray/tests/test_dataset.py::TestDataset::test_constructor_with_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_properties",
+          "xarray/tests/test_dataset.py::TestDataset::test_asarray",
+          "xarray/tests/test_dataset.py::TestDataset::test_get_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_attr_access",
+          "xarray/tests/test_dataset.py::TestDataset::test_variable",
+          "xarray/tests/test_dataset.py::TestDataset::test_modify_inplace",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_properties",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_modify",
+          "xarray/tests/test_dataset.py::TestDataset::test_update_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_setitem_with_new_dimension",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_setitem_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_set",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_to_dataset",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_merge",
+          "xarray/tests/test_dataset.py::TestDataset::test_coords_merge_mismatched_shape",
+          "xarray/tests/test_dataset.py::TestDataset::test_data_vars_properties",
+          "xarray/tests/test_dataset.py::TestDataset::test_equals_and_identical",
+          "xarray/tests/test_dataset.py::TestDataset::test_equals_failures",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_equals",
+          "xarray/tests/test_dataset.py::TestDataset::test_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_chunk",
+          "xarray/tests/test_dataset.py::TestDataset::test_dask_is_lazy",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel_fancy",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel_dataarray",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel_fancy_convert_index_variable",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_dataarray",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_dataarray_mindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_categorical",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_categorical_error",
+          "xarray/tests/test_dataset.py::TestDataset::test_categorical_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_categorical_reindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_categorical_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_drop",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_drop_mindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel_drop",
+          "xarray/tests/test_dataset.py::TestDataset::test_head",
+          "xarray/tests/test_dataset.py::TestDataset::test_tail",
+          "xarray/tests/test_dataset.py::TestDataset::test_thin",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_fancy",
+          "xarray/tests/test_dataset.py::TestDataset::test_sel_method",
+          "xarray/tests/test_dataset.py::TestDataset::test_loc",
+          "xarray/tests/test_dataset.py::TestDataset::test_selection_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_like",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_pandas",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_like",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_attrs_encoding",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_warning",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_variables_copied",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_method",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_fill_value[fill_value0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_fill_value[2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_fill_value[2.0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_fill_value[fill_value3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_like_fill_value[fill_value0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_like_fill_value[2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_like_fill_value[2.0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_like_fill_value[fill_value3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_str_dtype[str]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reindex_str_dtype[bytes]",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_fill_value[fill_value0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_fill_value[2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_fill_value[2.0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_fill_value[fill_value3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_align",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_exact",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_override",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_exclude",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_nocopy",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_indexes",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_non_unique",
+          "xarray/tests/test_dataset.py::TestDataset::test_align_str_dtype",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_nocopy",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_exclude",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_misaligned",
+          "xarray/tests/test_dataset.py::TestDataset::test_broadcast_multi_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_variable_indexing",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_variables",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_index_labels",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_labels_by_keyword",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_labels_by_position",
+          "xarray/tests/test_dataset.py::TestDataset::test_drop_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_copy",
+          "xarray/tests/test_dataset.py::TestDataset::test_copy_with_data",
+          "xarray/tests/test_dataset.py::TestDataset::test_copy_with_data_errors",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_old_name",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_same_name",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_vars",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_dimension_coord",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_perserve_attrs_encoding",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_does_not_change_CFTimeIndex_type",
+          "xarray/tests/test_dataset.py::TestDataset::test_rename_does_not_change_DatetimeIndex_type",
+          "xarray/tests/test_dataset.py::TestDataset::test_swap_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_error",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_int",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_existing_scalar_coord",
+          "xarray/tests/test_dataset.py::TestDataset::test_isel_expand_dims_roundtrip",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_mixed_int_and_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_expand_dims_kwargs_python36plus",
+          "xarray/tests/test_dataset.py::TestDataset::test_set_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_reset_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_reset_index_keep_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_reorder_levels",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_create_index[True-expected_keys0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_create_index[False-expected_keys1]",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_create_index[None-expected_keys2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_multi_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_non_dim_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_unstack",
+          "xarray/tests/test_dataset.py::TestDataset::test_unstack_errors",
+          "xarray/tests/test_dataset.py::TestDataset::test_unstack_fill_value",
+          "xarray/tests/test_dataset.py::TestDataset::test_unstack_sparse",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_unstack_fast",
+          "xarray/tests/test_dataset.py::TestDataset::test_stack_unstack_slow",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_invalid_sample_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_name",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_dtype_dims",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_to_unstacked_dataset",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_to_unstacked_dataset_different_dimension",
+          "xarray/tests/test_dataset.py::TestDataset::test_update",
+          "xarray/tests/test_dataset.py::TestDataset::test_update_overwrite_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_update_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_update_auto_align",
+          "xarray/tests/test_dataset.py::TestDataset::test_getitem",
+          "xarray/tests/test_dataset.py::TestDataset::test_getitem_hashable",
+          "xarray/tests/test_dataset.py::TestDataset::test_getitem_multiple_dtype",
+          "xarray/tests/test_dataset.py::TestDataset::test_virtual_variables_default_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_virtual_variables_time",
+          "xarray/tests/test_dataset.py::TestDataset::test_virtual_variable_same_name",
+          "xarray/tests/test_dataset.py::TestDataset::test_time_season",
+          "xarray/tests/test_dataset.py::TestDataset::test_slice_virtual_variable",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_pandas",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_auto_align",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_dimension_override",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_with_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_align_new_indexes",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_str_dtype[str]",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_str_dtype[bytes]",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_using_list",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_using_list_errors[var_list0-data0-Different",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_using_list_errors[var_list1-data1-Empty",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_using_list_errors[var_list2-data2-assign",
+          "xarray/tests/test_dataset.py::TestDataset::test_assign",
+          "xarray/tests/test_dataset.py::TestDataset::test_assign_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_assign_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_assign_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_assign_all_multiindex_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_merge_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_original_non_unique_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_both_non_unique_index",
+          "xarray/tests/test_dataset.py::TestDataset::test_setitem_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_delitem",
+          "xarray/tests/test_dataset.py::TestDataset::test_delitem_multiindex_level",
+          "xarray/tests/test_dataset.py::TestDataset::test_squeeze",
+          "xarray/tests/test_dataset.py::TestDataset::test_squeeze_drop",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_array",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_and_from_dataframe",
+          "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_categorical",
+          "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_sparse",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_and_from_empty_dataframe",
+          "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_unsorted_levels",
+          "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_non_unique_columns",
+          "xarray/tests/test_dataset.py::TestDataset::test_convert_dataframe_with_many_types_and_multiindex",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_and_from_dict",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_and_from_dict_with_time_dim",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_and_from_dict_with_nan_nat",
+          "xarray/tests/test_dataset.py::TestDataset::test_to_dict_with_numpy_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_pickle",
+          "xarray/tests/test_dataset.py::TestDataset::test_lazy_load",
+          "xarray/tests/test_dataset.py::TestDataset::test_dropna",
+          "xarray/tests/test_dataset.py::TestDataset::test_fillna",
+          "xarray/tests/test_dataset.py::TestDataset::test_propagate_attrs[<lambda>0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_propagate_attrs[<lambda>1]",
+          "xarray/tests/test_dataset.py::TestDataset::test_propagate_attrs[absolute]",
+          "xarray/tests/test_dataset.py::TestDataset::test_propagate_attrs[abs]",
+          "xarray/tests/test_dataset.py::TestDataset::test_where",
+          "xarray/tests/test_dataset.py::TestDataset::test_where_other",
+          "xarray/tests/test_dataset.py::TestDataset::test_where_drop",
+          "xarray/tests/test_dataset.py::TestDataset::test_where_drop_empty",
+          "xarray/tests/test_dataset.py::TestDataset::test_where_drop_no_indexes",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_mean_uint_dtype",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_bad_dim",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumsum-dim1-expected0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumsum-dim2-expected1]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumsum-dim3-expected2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumsum-time-expected3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumprod-dim1-expected0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumprod-dim2-expected1]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumprod-dim3-expected2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_cumsum_test_dims[cumprod-time-expected3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_non_numeric",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_strings",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_dtypes",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_keep_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_argmin",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_scalars",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_only_one_axis",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_no_axis",
+          "xarray/tests/test_dataset.py::TestDataset::test_reduce_keepdims",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[0.25-True]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[0.25-False]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[0.25-None]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q1-True]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q1-False]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q1-None]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q2-True]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q2-False]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile[q2-None]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_skipna[True]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_skipna[False]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_method[midpoint]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_method[lower]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_interpolation_deprecated[midpoint]",
+          "xarray/tests/test_dataset.py::TestDataset::test_quantile_interpolation_deprecated[lower]",
+          "xarray/tests/test_dataset.py::TestDataset::test_rank",
+          "xarray/tests/test_dataset.py::TestDataset::test_rank_use_bottleneck",
+          "xarray/tests/test_dataset.py::TestDataset::test_count",
+          "xarray/tests/test_dataset.py::TestDataset::test_map",
+          "xarray/tests/test_dataset.py::TestDataset::test_apply_pending_deprecated_map",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_number_math",
+          "xarray/tests/test_dataset.py::TestDataset::test_unary_ops",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_array_math",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_dataset_math",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_math_auto_align",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_math_errors",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_transpose",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_ellipsis_transpose_different_ordered_vars",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_retains_period_index_on_transpose",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_n1_simple",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_n1_label",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_n1",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_n2",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_exception_n_neg",
+          "xarray/tests/test_dataset.py::TestDataset::test_dataset_diff_exception_label_str",
+          "xarray/tests/test_dataset.py::TestDataset::test_shift[fill_value0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_shift[2]",
+          "xarray/tests/test_dataset.py::TestDataset::test_shift[2.0]",
+          "xarray/tests/test_dataset.py::TestDataset::test_shift[fill_value3]",
+          "xarray/tests/test_dataset.py::TestDataset::test_roll_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_roll_no_coords",
+          "xarray/tests/test_dataset.py::TestDataset::test_roll_multidim",
+          "xarray/tests/test_dataset.py::TestDataset::test_real_and_imag",
+          "xarray/tests/test_dataset.py::TestDataset::test_setattr_raises",
+          "xarray/tests/test_dataset.py::TestDataset::test_filter_by_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_binary_op_propagate_indexes",
+          "xarray/tests/test_dataset.py::TestDataset::test_binary_op_join_setting",
+          "xarray/tests/test_dataset.py::TestDataset::test_full_like",
+          "xarray/tests/test_dataset.py::TestDataset::test_combine_first",
+          "xarray/tests/test_dataset.py::TestDataset::test_sortby",
+          "xarray/tests/test_dataset.py::TestDataset::test_attribute_access",
+          "xarray/tests/test_dataset.py::TestDataset::test_ipython_key_completion",
+          "xarray/tests/test_dataset.py::TestDataset::test_polyfit_output",
+          "xarray/tests/test_dataset.py::TestDataset::test_polyfit_warnings",
+          "xarray/tests/test_dataset.py::TestDataset::test_pad",
+          "xarray/tests/test_dataset.py::TestDataset::test_astype_attrs",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-python-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-python-python]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-None-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-None-python]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-numexpr-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[numpy-numexpr-python]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-python-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-python-python]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-None-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-None-python]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-numexpr-pandas]",
+          "xarray/tests/test_dataset.py::TestDataset::test_query[dask-numexpr-python]",
+          "xarray/tests/test_dataset.py::test_isin[numpy-test_elements0]",
+          "xarray/tests/test_dataset.py::test_isin[numpy-test_elements1]",
+          "xarray/tests/test_dataset.py::test_isin[numpy-test_elements2]",
+          "xarray/tests/test_dataset.py::test_isin[dask-test_elements0]",
+          "xarray/tests/test_dataset.py::test_isin[dask-test_elements1]",
+          "xarray/tests/test_dataset.py::test_isin[dask-test_elements2]",
+          "xarray/tests/test_dataset.py::test_isin_dataset",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords0]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords1]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords2]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords3]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords4]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords5]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords6]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords7]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords8]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords0-unaligned_coords9]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords0]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords1]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords2]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords3]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords4]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords5]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords6]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords7]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords8]",
+          "xarray/tests/test_dataset.py::test_dataset_constructor_aligns_to_explicit_coords[coords1-unaligned_coords9]",
+          "xarray/tests/test_dataset.py::test_error_message_on_set_supplied",
+          "xarray/tests/test_dataset.py::test_constructor_raises_with_invalid_coords[unaligned_coords0]",
+          "xarray/tests/test_dataset.py::test_dir_expected_attrs[numpy-3]",
+          "xarray/tests/test_dataset.py::test_dir_expected_attrs[dask-3]",
+          "xarray/tests/test_dataset.py::test_dir_non_string[1-numpy]",
+          "xarray/tests/test_dataset.py::test_dir_non_string[1-dask]",
+          "xarray/tests/test_dataset.py::test_dir_unicode[1-numpy]",
+          "xarray/tests/test_dataset.py::test_dir_unicode[1-dask]",
+          "xarray/tests/test_dataset.py::test_rolling_keep_attrs[reduce-argument0]",
+          "xarray/tests/test_dataset.py::test_rolling_keep_attrs[mean-argument1]",
+          "xarray/tests/test_dataset.py::test_rolling_keep_attrs[construct-argument2]",
+          "xarray/tests/test_dataset.py::test_rolling_keep_attrs[count-argument3]",
+          "xarray/tests/test_dataset.py::test_rolling_properties[1-numpy]",
+          "xarray/tests/test_dataset.py::test_rolling_properties[1-dask]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-True-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-False-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-1-None-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-True-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-False-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z1-None-None-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-True-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-False-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-1-None-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-True-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-False-median]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-sum]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-mean]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-std]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-var]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-min]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-max]",
+          "xarray/tests/test_dataset.py::test_rolling_wrapped_bottleneck[1-numpy-z2-None-None-median]",
+          "xarray/tests/test_dataset.py::test_rolling_exp[1-numpy]",
+          "xarray/tests/test_dataset.py::test_rolling_exp_keep_attrs[1-numpy]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-None-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-None-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-1-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-1-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-2-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-2-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-3-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[1-3-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-None-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-None-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-1-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-1-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-2-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-2-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-3-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[2-3-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-None-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-None-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-1-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-1-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-2-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-2-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-3-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[3-3-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-None-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-None-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-1-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-1-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-2-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-2-False]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-3-True]",
+          "xarray/tests/test_dataset.py::test_rolling_pandas_compat[4-3-False]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[1-True]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[1-False]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[2-True]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[2-False]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[3-True]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[3-False]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[4-True]",
+          "xarray/tests/test_dataset.py::test_rolling_construct[4-False]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-sum-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-mean-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-std-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-var-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-min-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-max-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[numpy-median-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-sum-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-mean-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-std-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-var-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-min-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-max-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-1-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-2-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-3-3-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-None-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-None-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-None-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-None-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-1-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-1-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-1-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-1-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-2-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-2-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-2-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-2-False-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-3-True-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-3-True-2]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-3-False-1]",
+          "xarray/tests/test_dataset.py::test_rolling_reduce[dask-median-4-3-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-sum-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-sum-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-sum-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-sum-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-max-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-max-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-max-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-True-max-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-sum-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-sum-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-sum-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-sum-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-max-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-max-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-max-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[numpy-False-max-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-sum-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-sum-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-sum-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-sum-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-max-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-max-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-max-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-True-max-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-sum-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-sum-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-sum-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-sum-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-max-None-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-max-None-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-max-1-True-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_reduce[dask-False-max-1-False-2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-nan-True]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-nan-False]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-nan-center2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-0.0-True]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-0.0-False]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[True-0.0-center2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-nan-True]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-nan-False]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-nan-center2]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-0.0-True]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-0.0-False]",
+          "xarray/tests/test_dataset.py::test_ndrolling_construct[False-0.0-center2]",
+          "xarray/tests/test_dataset.py::test_raise_no_warning_for_nan_in_binary_ops",
+          "xarray/tests/test_dataset.py::test_raise_no_warning_assert_close[numpy-2]",
+          "xarray/tests/test_dataset.py::test_raise_no_warning_assert_close[dask-2]",
+          "xarray/tests/test_dataset.py::test_differentiate[1-True]",
+          "xarray/tests/test_dataset.py::test_differentiate[1-False]",
+          "xarray/tests/test_dataset.py::test_differentiate[2-True]",
+          "xarray/tests/test_dataset.py::test_differentiate[2-False]",
+          "xarray/tests/test_dataset.py::test_differentiate_datetime[True]",
+          "xarray/tests/test_dataset.py::test_differentiate_datetime[False]",
+          "xarray/tests/test_dataset.py::test_differentiate_cftime[True]",
+          "xarray/tests/test_dataset.py::test_differentiate_cftime[False]",
+          "xarray/tests/test_dataset.py::test_integrate[True]",
+          "xarray/tests/test_dataset.py::test_integrate[False]",
+          "xarray/tests/test_dataset.py::test_cumulative_integrate[True]",
+          "xarray/tests/test_dataset.py::test_cumulative_integrate[False]",
+          "xarray/tests/test_dataset.py::test_trapz_datetime[np-True]",
+          "xarray/tests/test_dataset.py::test_trapz_datetime[np-False]",
+          "xarray/tests/test_dataset.py::test_trapz_datetime[cftime-True]",
+          "xarray/tests/test_dataset.py::test_trapz_datetime[cftime-False]",
+          "xarray/tests/test_dataset.py::test_no_dict",
+          "xarray/tests/test_dataset.py::test_subclass_slots",
+          "xarray/tests/test_dataset.py::test_weakref",
+          "xarray/tests/test_dataset.py::test_deepcopy_obj_array",
+          "xarray/tests/test_dataset.py::test_clip[1-numpy]",
+          "xarray/tests/test_dataset.py::test_clip[1-dask]",
+          "xarray/tests/test_dataset.py::TestDropDuplicates::test_drop_duplicates_1d[first]",
+          "xarray/tests/test_dataset.py::TestDropDuplicates::test_drop_duplicates_1d[last]",
+          "xarray/tests/test_dataset.py::TestDropDuplicates::test_drop_duplicates_1d[False]",
+          "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_numpy",
+          "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_dask",
+          "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_pint",
+          "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_sparse",
+          "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_pint_wrapping_dask",
+          "xarray/tests/test_dataset.py::test_string_keys_typing"
+        ]
+      },
+      "passes": true
+    },
+    {
+      "id": "astropy__astropy-14995",
+      "original_unpatched": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "astropy/nddata/mixins/tests/test_ndarithmetic.py::test_nddata_bitmask_arithmetic"
+        ],
+        "p2p_failed": []
+      },
+      "original_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [
+          "astropy/nddata/mixins/tests/test_ndarithmetic.py::test_nddata_bitmask_arithmetic"
+        ],
+        "f2p_failed": [],
+        "p2p_failed": []
+      },
+      "conflicting_gold": {
+        "completed": true,
+        "log_valid": true,
+        "f2p_passed": [],
+        "f2p_failed": [
+          "astropy/nddata/mixins/tests/test_ndarithmetic.py::test_nddata_bitmask_arithmetic"
+        ],
+        "p2p_failed": []
+      },
+      "passes": true
+    }
+  ]
+}
