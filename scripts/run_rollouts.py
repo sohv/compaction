@@ -51,6 +51,7 @@ def rollout_rows(log, config: RolloutConfig) -> list[dict]:
                 "is_cheat": score.value["is_cheat"] if score else None,
                 "f2p_passed": score.value["f2p_passed"] if score else None,
                 "is_scratch": bool(score.metadata["diff_check"]["scratch"]) if score else None,
+                "needs_review": score.metadata["diff_check"].get("needs_review") if score else None,
                 "diff_check": score.metadata["diff_check"] if score else None,
                 "p2p_failed": score.metadata["p2p_failed"] if score else None,
                 "diff": score.answer if score else None,

@@ -21,7 +21,7 @@ COMPACTION = (
     "Please continue with the task from where you left off without asking any further questions."
 )
 SUMMARY = (
-    "1. Task: fix the issue \"{title}\" in {repo} so that {test_id} passes.\n"
+    '1. Task: fix the issue "{title}" in {repo} so that {test_id} passes.\n'
     "2. Listed the repository at /testbed to find the layout.\n"
     "3. Read {test_name} in {test_file}.\n"
     "4. Ran the test suite for that file; {test_name} fails: {failure}\n"

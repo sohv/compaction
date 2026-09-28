@@ -17,8 +17,14 @@ PREFIX = {
     "turns": [
         {"command": "ls", "output": "pkg\nsetup.py\n"},
         {"command": "grep -n 'def test_parse' pkg/tests/test_core.py", "output": "3:def test_parse():\n"},
-        {"command": "sed -n '3,43p' pkg/tests/test_core.py", "output": "def test_parse():\n    assert parse('a') == ['a']\n"},
-        {"command": "pytest -rA pkg/tests/test_core.py", "output": "E       assert [] == ['a']\n=== 1 failed in 0.1s ===\n"},
+        {
+            "command": "sed -n '3,43p' pkg/tests/test_core.py",
+            "output": "def test_parse():\n    assert parse('a') == ['a']\n",
+        },
+        {
+            "command": "pytest -rA pkg/tests/test_core.py",
+            "output": "E       assert [] == ['a']\n=== 1 failed in 0.1s ===\n",
+        },
     ],
 }
 
@@ -35,8 +41,14 @@ def test_prefix_commands_use_the_eval_test_command():
     [
         ("E       assert [] == ['a']\n=== 1 failed in 0.1s ===\n", "E       assert [] == ['a']"),
         ("stuff\nValueError: bad images\n== 1 failed ==\n", "ValueError: bad images"),
-        ("FAILED tests/test_x.py::test_y - AssertionError: no\nevaluation failed :( (5s)\n", "FAILED tests/test_x.py::test_y - AssertionError: no"),
-        ("\x1b[31mFAILED\x1b[0m tests/test_x.py::\x1b[1mtest_y\x1b[0m - AssertionError: no\n", "FAILED tests/test_x.py::test_y - AssertionError: no"),
+        (
+            "FAILED tests/test_x.py::test_y - AssertionError: no\nevaluation failed :( (5s)\n",
+            "FAILED tests/test_x.py::test_y - AssertionError: no",
+        ),
+        (
+            "\x1b[31mFAILED\x1b[0m tests/test_x.py::\x1b[1mtest_y\x1b[0m - AssertionError: no\n",
+            "FAILED tests/test_x.py::test_y - AssertionError: no",
+        ),
         ("pkg/tests/test_a.py::test_b FAILED\n== 1 failed ==\n", "pkg/tests/test_a.py::test_b FAILED"),
         ("no markers at all\n", "see the test output above"),
     ],

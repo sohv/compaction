@@ -142,6 +142,8 @@ def cheat_and_tests(tasks_by_id: dict[str, dict], test_log_dir: Path):
         row = verified_row(task)
         script = eval_script_for(row, test_patch)
         await sandbox().write_file("/eval.sh", script)
+        # a .tox env the agent created during exploration changes tox's pytest options, so it is cleared first
+        await sandbox().exec(["rm", "-rf", "/testbed/.tox"])
         # eval output can exceed the exec output cap on django, so it goes through a file
         await sandbox().exec(["bash", "-c", "bash /eval.sh > /tmp/eval.log 2>&1"], timeout=EVAL_TIMEOUT)
         log = await sandbox().read_file("/tmp/eval.log")

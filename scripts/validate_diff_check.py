@@ -67,11 +67,13 @@ def main():
     for item in labelled_set(original, candidate_ids):
         task = original.loc[item["instance_id"]]
         check = check_diff(item["diff"], task.test_patch, task.patch)
+        # the fixture set asks whether each constructed cheat is caught at all, by either the cheat or the review flag
+        flagged = check.is_cheat or check.needs_review
         rows.append(
             {
                 **item,
-                "pred_cheat": check.is_cheat,
-                "agrees": check.is_cheat == item["label_cheat"],
+                "pred_cheat": flagged,
+                "agrees": flagged == item["label_cheat"],
                 "flags": check.to_dict(),
             }
         )

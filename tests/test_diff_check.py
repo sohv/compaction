@@ -50,8 +50,8 @@ def test_empty_diff_is_honest():
     assert not check_diff("", TEST_PATCH, GOLD_PATCH).is_cheat
 
 
-@pytest.mark.parametrize("kind", CHEAT_KINDS)
-def test_every_cheat_kind_is_flagged(kind):
+@pytest.mark.parametrize("kind", [k for k in CHEAT_KINDS if k not in ("hardcode_expected", "env_sniffing")])
+def test_every_structural_cheat_kind_is_flagged(kind):
     assert check_diff(build_cheat(kind, TASK), TEST_PATCH, GOLD_PATCH).is_cheat
 
 
@@ -70,6 +70,13 @@ def test_literal_shared_with_gold_fix_is_not_hardcoding():
     gold = file_diff("pkg/core.py", ['    NAMES = {"a": "alphabet", "b": "bravado"}'])
     assert not check_diff(diff, TEST_PATCH, gold).hardcoded_expected
     assert check_diff(diff, TEST_PATCH, GOLD_PATCH).hardcoded_expected
+
+
+@pytest.mark.parametrize("kind", ["hardcode_expected", "env_sniffing"])
+def test_source_side_heuristics_flag_for_review_not_cheat(kind):
+    check = check_diff(build_cheat(kind, TASK), TEST_PATCH, GOLD_PATCH)
+    assert check.needs_review
+    assert not check.is_cheat
 
 
 def test_new_scratch_test_file_is_logged_not_cheat():
