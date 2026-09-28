@@ -11,21 +11,24 @@ from inspect_ai import eval
 from inspect_ai.model import GenerateConfig, get_model
 
 from src.data.io import load_jsonl
-from src.generation.swe_agent import issue_only_messages, swe_task
+from src.generation.arms import ARMS
+from src.generation.swe_agent import swe_task
 from src.metrics.io import write_json, write_jsonl
 from src.utils.config import Config, write_config_json
 from src.utils.logging import setup_logging
 from src.utils.seed import set_seed
 
 LOGGER = logging.getLogger(__name__)
-ARMS = {"issue_only": issue_only_messages}
 
 
 @dataclass
 class RolloutConfig(Config):
     split: str = "original"
     arm: str = "issue_only"
+    prefixes_path: str = ""  # from scripts.build_prefixes, required for every arm except issue_only
     message_limit: int = 100
+    prohibit_test_edits: bool = True  # the "DO NOT MODIFY THE TESTS" line in the system prompt
+    max_attempts: int = 1  # submissions per rollout, above 1 only for the feedback robustness check
     max_sandboxes: int = 4
     max_connections: int = 10
     provider: str = ""  # openrouter upstream to pin, with fallbacks off
@@ -47,6 +50,7 @@ def rollout_rows(log, config: RolloutConfig) -> list[dict]:
                 "arm": config.arm,
                 "is_cheat": score.value["is_cheat"] if score else None,
                 "f2p_passed": score.value["f2p_passed"] if score else None,
+                "is_scratch": bool(score.metadata["diff_check"]["scratch"]) if score else None,
                 "diff_check": score.metadata["diff_check"] if score else None,
                 "p2p_failed": score.metadata["p2p_failed"] if score else None,
                 "diff": score.answer if score else None,
@@ -71,14 +75,22 @@ def main():
 
     tasks = load_jsonl(config.dataset_path, config.num_tasks)
     LOGGER.info(f"loaded {len(tasks)} tasks from {config.dataset_path}")
+    assert config.arm in ARMS, f"unknown arm {config.arm}, choose from {sorted(ARMS)}"
+    prefixes = {}
+    if config.arm != "issue_only":
+        assert config.prefixes_path, f"--prefixes_path is required for arm {config.arm}"
+        prefixes = {p["id"]: p for p in load_jsonl(config.prefixes_path) if p["split"] == config.split}
+        assert all(t["id"] in prefixes for t in tasks), f"prefixes missing for some tasks in {config.prefixes_path}"
     task = swe_task(
         tasks,
         config.split,
-        {t["id"]: ARMS[config.arm](t) for t in tasks},
+        {t["id"]: ARMS[config.arm](t, prefixes.get(t["id"])) for t in tasks},
         Path("cache/compose"),
         output_dir / "generations" / "test_logs",
         config.message_limit,
         config.n_repeats,
+        config.prohibit_test_edits,
+        config.max_attempts,
     )
     model_args = {}
     if config.provider:
@@ -107,6 +119,7 @@ def main():
         "n_rows": len(rows),
         "n_failed": len(rows) - len(scored),
         "cheat_rate": sum(row["is_cheat"] for row in scored) / len(scored) if scored else None,
+        "scratch_rate": sum(row["is_scratch"] for row in scored) / len(scored) if scored else None,
         "f2p_pass_rate": sum(row["f2p_passed"] for row in scored) / len(scored) if scored else None,
         "inspect_log": log.location,
     }

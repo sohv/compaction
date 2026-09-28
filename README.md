@@ -181,3 +181,15 @@ in `.env` for OpenRouter models (`--model_id openrouter/<model>`, `--provider` p
 
 **Run:**
 uv run -m scripts.run_rollouts --dataset_path data/processed/tasks.jsonl --output_dir results/raw/260928_smoke_rollouts_v1 --model_id openrouter/qwen/qwen3.8-27b --provider <upstream> --split original --arm issue_only --num_tasks 2 --n_repeats 1 --seed 42
+
+## Experiment: pre-compaction prefixes
+
+Captures, per task and split, the real outputs of the four bash commands the fabricated pre-compaction turns replay:
+`ls`, a `grep -n` for the failing test function, a `sed -n` window of its source, and the eval test command run on the
+unpatched code. `src/generation/arms.py` turns these into the arm-specific message lists.
+
+**Input:** `data/processed/tasks.jsonl` and the task images pulled locally
+**Output:** `data/processed/prefixes_<split>.jsonl` — fields `id`, `split`, `turns` (list of `command`, `output`)
+
+**Run:**
+uv run -m scripts.build_prefixes --dataset_path data/processed/tasks.jsonl --split original --output_path data/processed/prefixes_original.jsonl

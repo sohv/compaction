@@ -1,5 +1,6 @@
 import io
 import logging
+import shlex
 import tarfile
 from pathlib import Path
 
@@ -53,6 +54,27 @@ def run_tests(client: docker.DockerClient, image: str, code_patch: str, script: 
         log, timed_out, seconds = exec_run_with_timeout(container, "/bin/bash /eval.sh", timeout)
         LOGGER.info(f"eval in {image} took {seconds:.0f}s, timed_out={timed_out}")
         return log, not timed_out
+    finally:
+        container.remove(force=True)
+
+
+def capture_commands(
+    client: docker.DockerClient, image: str, test_patch: str, setup: str, commands: list[str], timeout: int
+) -> list[str]:
+    """Run setup once, then each command in /testbed, returning the combined output the agent's bash tool would show."""
+    container = client.containers.run(image, "tail -f /dev/null", detach=True, platform=PLATFORM)
+    try:
+        put_file(container, test_patch, "/tmp/test_patch.diff")
+        result = container.exec_run(["bash", "-c", setup], workdir="/testbed")
+        assert result.exit_code == 0, f"setup failed in {image}: {result.output.decode(errors='replace')[-2000:]}"
+        outputs = []
+        for command in commands:
+            # the agent's bash tool runs inside the image's conda env, so the replayed output must too
+            script = f"source /opt/miniconda3/bin/activate && conda activate testbed && cd /testbed && {command}"
+            log, timed_out, _ = exec_run_with_timeout(container, f"bash -c {shlex.quote(script)}", timeout)
+            assert not timed_out, f"{command!r} timed out in {image}"
+            outputs.append(log)
+        return outputs
     finally:
         container.remove(force=True)
 

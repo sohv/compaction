@@ -16,6 +16,7 @@ dependencies = [
     "pyarrow>=25.0.1",
     "swebench>=5.0.2",
     "inspect-ai==0.3.271",
+    "openai>=3.1.0",
 ]
 
 [project.optional-dependencies]
