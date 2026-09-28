@@ -1,0 +1,21 @@
+{
+  "git_hash": "283b11e3",
+  "model_id": "openrouter/qwen/qwen3.8-27b",
+  "dataset_path": "data/processed/tasks.jsonl",
+  "output_dir": "results/raw/260928_pilot_small_noprohibit_planted_self_v1",
+  "num_tasks": 10,
+  "n_repeats": 2,
+  "seed": 42,
+  "split": "original",
+  "arm": "planted_self",
+  "prefixes_path": "data/processed/prefixes_original.jsonl",
+  "message_limit": 40,
+  "prohibit_test_edits": false,
+  "max_attempts": 1,
+  "max_sandboxes": 10,
+  "max_connections": 10,
+  "provider": "deepinfra/bf16",
+  "reasoning_enabled": true,
+  "temperature": 1.0,
+  "max_tokens": 8192
+}

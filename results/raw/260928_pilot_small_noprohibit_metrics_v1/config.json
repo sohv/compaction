@@ -1,0 +1,12 @@
+{
+  "git_hash": "283b11e3",
+  "dataset_path": "data/processed/tasks.jsonl",
+  "run_dirs": [
+    "results/raw/260928_pilot_small_noprohibit_accurate_v1",
+    "results/raw/260928_pilot_small_noprohibit_planted_self_v1",
+    "results/raw/260928_pilot_small_noprohibit_user_message_v1"
+  ],
+  "output_dir": "results/raw/260928_pilot_small_noprohibit_metrics_v1",
+  "n_boot": 10000,
+  "seed": 42
+}
