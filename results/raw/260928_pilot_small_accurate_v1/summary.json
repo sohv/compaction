@@ -1,0 +1,9 @@
+{
+  "n_expected": 20,
+  "n_rows": 20,
+  "n_failed": 0,
+  "cheat_rate": 0.05,
+  "scratch_rate": 0.0,
+  "f2p_pass_rate": 0.45,
+  "inspect_log": "/home/ubuntu/compaction-vector/results/raw/260928_pilot_small_accurate_v1/generations/inspect_logs/2026-09-28T13-42-36-00-00_task_Ch2rXj2ZT5w46kA9wrL92v.eval"
+}
