@@ -12,6 +12,7 @@ import simple_parsing
 from src.data.io import load_jsonl
 from src.metrics.diff_check import check_diff
 from src.metrics.io import write_json
+from src.utils.config import write_config_json
 from src.utils.git import get_git_hash
 
 LOGGER = logging.getLogger(__name__)
@@ -31,7 +32,11 @@ def rescore(run_dir: Path, tasks: dict[str, dict]) -> tuple[str, list[dict]]:
     rows = []
     for row in load_jsonl(run_dir / "outputs.jsonl"):
         task = tasks[row["instance_id"]]
-        check = check_diff(row["diff"], task[f"{config['split']}_test_patch"], task["patch"]) if row["diff"] is not None else None
+        check = (
+            check_diff(row["diff"], task[f"{config['split']}_test_patch"], task["patch"])
+            if row["diff"] is not None
+            else None
+        )
         rows.append(
             {
                 "id": row["id"],
@@ -42,7 +47,9 @@ def rescore(run_dir: Path, tasks: dict[str, dict]) -> tuple[str, list[dict]]:
                 "needs_review": check.needs_review if check else None,
                 "f2p_passed": row["f2p_passed"],
                 "hit_limit": row["n_messages"] >= config["message_limit"],
-                "flags": {k: v for k, v in check.to_dict().items() if v and k not in ("is_cheat", "needs_review")} if check else None,
+                "flags": {k: v for k, v in check.to_dict().items() if v and k not in ("is_cheat", "needs_review")}
+                if check
+                else None,
             }
         )
     return config["arm"], rows
@@ -68,13 +75,20 @@ def bootstrap_rates(arms: dict[str, list[dict]], key: str, task_ids: list[str], 
     boot = {arm: sums[idx].sum(1) / np.maximum(counts[idx].sum(1), 1) for arm, (sums, counts) in stats.items()}
     out = {}
     for arm, (sums, counts) in stats.items():
-        out[arm] = {"rate": sums.sum() / counts.sum(), "ci95": list(np.percentile(boot[arm], [2.5, 97.5])), "n": int(counts.sum())}
+        out[arm] = {
+            "rate": sums.sum() / counts.sum(),
+            "ci95": list(np.percentile(boot[arm], [2.5, 97.5])),
+            "n": int(counts.sum()),
+        }
     names = list(arms)
     for a in names:
         for b in names:
             if a != b:
                 d = boot[a] - boot[b]
-                out[f"{a}_minus_{b}"] = {"diff": out[a]["rate"] - out[b]["rate"], "ci95": list(np.percentile(d, [2.5, 97.5]))}
+                out[f"{a}_minus_{b}"] = {
+                    "diff": out[a]["rate"] - out[b]["rate"],
+                    "ci95": list(np.percentile(d, [2.5, 97.5])),
+                }
     return out
 
 
@@ -106,12 +120,18 @@ def main():
         "cheat_rate": bootstrap_rates(arms, "is_cheat", task_ids, config.n_boot, config.seed),
         "scratch_rate": bootstrap_rates(arms, "is_scratch", task_ids, config.n_boot, config.seed),
         "f2p_pass_rate": bootstrap_rates(arms, "f2p_passed", task_ids, config.n_boot, config.seed),
-        "flagged_rows": {arm: [r for r in rows if r["is_cheat"] or r["needs_review"] or r["is_scratch"]] for arm, rows in arms.items()},
+        "flagged_rows": {
+            arm: [r for r in rows if r["is_cheat"] or r["needs_review"] or r["is_scratch"]]
+            for arm, rows in arms.items()
+        },
     }
+    write_config_json(config, config.output_dir)
     path = write_json(summary, Path(config.output_dir) / "metrics.json")
     for arm, c in summary["counts"].items():
         rate = summary["cheat_rate"][arm]
-        print(f"{arm}: cheat {c['cheat']}/{c['rows']} = {rate['rate']:.2f} [{rate['ci95'][0]:.2f}, {rate['ci95'][1]:.2f}] scratch {c['scratch']} review {c['needs_review']} f2p {c['f2p_passed']} limit {c['hit_limit']} failed {c['failed']}")
+        print(
+            f"{arm}: cheat {c['cheat']}/{c['rows']} = {rate['rate']:.2f} [{rate['ci95'][0]:.2f}, {rate['ci95'][1]:.2f}] scratch {c['scratch']} review {c['needs_review']} f2p {c['f2p_passed']} limit {c['hit_limit']} failed {c['failed']}"
+        )
     for key, value in summary["cheat_rate"].items():
         if "_minus_" in key:
             print(f"{key}: {value['diff']:+.2f} [{value['ci95'][0]:+.2f}, {value['ci95'][1]:+.2f}]")
