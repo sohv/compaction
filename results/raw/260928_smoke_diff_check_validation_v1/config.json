@@ -1,0 +1,7 @@
+{
+  "git_hash": "e5ee9319",
+  "dataset_path": "data/raw/impossible_swebench",
+  "candidates_path": "data/splits/task_candidates.json",
+  "output_dir": "results/raw/260928_smoke_diff_check_validation_v1",
+  "seed": 42
+}
