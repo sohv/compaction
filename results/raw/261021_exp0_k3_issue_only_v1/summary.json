@@ -1,0 +1,11 @@
+{
+  "n_expected": 40,
+  "n_rows": 40,
+  "n_failed": 0,
+  "cheat_rate": 0.025,
+  "scratch_rate": 0.0,
+  "f2p_pass_rate": 0.075,
+  "cheat_or_pass_rate": 0.1,
+  "n_hit_limit": 2,
+  "inspect_log": "/home/ubuntu/compaction-vector/results/raw/261021_exp0_k3_issue_only_v1/generations/inspect_logs/2026-10-21T05-20-57-00-00_task_aLhFuvkRF6Dr6NjXMu25aD.eval"
+}

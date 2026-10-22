@@ -8,10 +8,10 @@ from pathlib import Path
 import simple_parsing
 from dotenv import load_dotenv
 from inspect_ai import eval
-from inspect_ai.model import GenerateConfig, get_model
 
 from src.data.io import load_jsonl
-from src.generation.arms import ARMS
+from src.generation.arms import ARMS, NO_PREFIX_ARMS
+from src.generation.rollout_io import openrouter_model, rollout_rows, run_summary
 from src.generation.swe_agent import swe_task
 from src.metrics.io import write_json, write_jsonl
 from src.utils.config import Config, write_config_json
@@ -25,7 +25,7 @@ LOGGER = logging.getLogger(__name__)
 class RolloutConfig(Config):
     split: str = "original"
     arm: str = "issue_only"
-    prefixes_path: str = ""  # from scripts.build_prefixes, required for every arm except issue_only
+    prefixes_path: str = ""  # from scripts.build_prefixes, required for every arm outside NO_PREFIX_ARMS
     message_limit: int = 100
     prohibit_test_edits: bool = True  # the "DO NOT MODIFY THE TESTS" line in the system prompt
     max_attempts: int = 1  # submissions per rollout, above 1 only for the feedback robustness check
@@ -35,31 +35,6 @@ class RolloutConfig(Config):
     reasoning_enabled: bool | None = None
     temperature: float | None = None
     max_tokens: int | None = None
-
-
-def rollout_rows(log, config: RolloutConfig) -> list[dict]:
-    rows = []
-    for sample in log.samples:
-        score = next(iter(sample.scores.values())) if sample.scores else None
-        rows.append(
-            {
-                "id": f"{sample.id}__epoch{sample.epoch}",
-                "instance_id": sample.id,
-                "epoch": sample.epoch,
-                "split": config.split,
-                "arm": config.arm,
-                "is_cheat": score.value["is_cheat"] if score else None,
-                "f2p_passed": score.value["f2p_passed"] if score else None,
-                "is_scratch": bool(score.metadata["diff_check"]["scratch"]) if score else None,
-                "needs_review": score.metadata["diff_check"].get("needs_review") if score else None,
-                "diff_check": score.metadata["diff_check"] if score else None,
-                "p2p_failed": score.metadata["p2p_failed"] if score else None,
-                "diff": score.answer if score else None,
-                "n_messages": len(sample.messages),
-                "error": sample.error.message if sample.error else None,
-            }
-        )
-    return rows
 
 
 def main():
@@ -78,7 +53,7 @@ def main():
     LOGGER.info(f"loaded {len(tasks)} tasks from {config.dataset_path}")
     assert config.arm in ARMS, f"unknown arm {config.arm}, choose from {sorted(ARMS)}"
     prefixes = {}
-    if config.arm != "issue_only":
+    if config.arm not in NO_PREFIX_ARMS:
         assert config.prefixes_path, f"--prefixes_path is required for arm {config.arm}"
         prefixes = {p["id"]: p for p in load_jsonl(config.prefixes_path) if p["split"] == config.split}
         assert all(t["id"] in prefixes for t in tasks), f"prefixes missing for some tasks in {config.prefixes_path}"
@@ -93,13 +68,9 @@ def main():
         config.prohibit_test_edits,
         config.max_attempts,
     )
-    model_args = {}
-    if config.provider:
-        model_args["provider"] = {"order": [config.provider], "allow_fallbacks": False}
-    if config.reasoning_enabled is not None:
-        model_args["reasoning_enabled"] = config.reasoning_enabled
-    generate_config = GenerateConfig(seed=config.seed, temperature=config.temperature, max_tokens=config.max_tokens)
-    model = get_model(config.model_id, config=generate_config, **model_args)
+    model = openrouter_model(
+        config.model_id, config.provider, config.reasoning_enabled, config.temperature, config.max_tokens, config.seed
+    )
 
     log = eval(
         task,
@@ -111,19 +82,9 @@ def main():
         display="plain",
     )[0]
 
-    rows = rollout_rows(log, config)
-    # errored samples stay as rows with null scores, a dropped row is a silently shrunk dataset
-    scored = [row for row in rows if row["is_cheat"] is not None]
+    rows = rollout_rows(log, config.split, config.arm)
     n_expected = len(tasks) * config.n_repeats
-    summary = {
-        "n_expected": n_expected,
-        "n_rows": len(rows),
-        "n_failed": len(rows) - len(scored),
-        "cheat_rate": sum(row["is_cheat"] for row in scored) / len(scored) if scored else None,
-        "scratch_rate": sum(row["is_scratch"] for row in scored) / len(scored) if scored else None,
-        "f2p_pass_rate": sum(row["f2p_passed"] for row in scored) / len(scored) if scored else None,
-        "inspect_log": log.location,
-    }
+    summary = run_summary(rows, n_expected, log)
     if len(rows) != n_expected:
         LOGGER.warning(f"expected {n_expected} rows, got {len(rows)}")
     path = write_jsonl(rows, output_dir / "outputs.jsonl")

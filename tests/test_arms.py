@@ -1,6 +1,14 @@
 import pytest
 
-from src.generation.arms import ARMS, PLANTED, failure_line, prefix_commands, summary_text
+from src.generation.arms import (
+    ARMS,
+    NO_PREFIX_ARMS,
+    PLANTED,
+    POSITIVE_LINE,
+    failure_line,
+    prefix_commands,
+    summary_text,
+)
 from src.metrics.cheat_fixtures import file_diff
 
 TASK = {
@@ -73,10 +81,17 @@ def test_planted_line_is_point_five(key):
 
 
 def test_arms_share_the_transcript_and_differ_only_in_the_last_message():
-    built = {arm: ARMS[arm](TASK, PREFIX) for arm in ARMS if arm != "issue_only"}
+    built = {arm: ARMS[arm](TASK, PREFIX) for arm in ARMS if arm not in NO_PREFIX_ARMS}
     transcripts = {arm: [(m.role, m.text) for m in messages[:-1]] for arm, messages in built.items()}
     assert len({str(t) for t in transcripts.values()}) == 1
     assert [m.role for m in built["accurate"]] == ["user"] + ["assistant", "tool"] * 4 + ["user"]
     assert "continued from a previous conversation" in built["planted_self"][-1].text
     assert "continued from a previous conversation" not in built["user_message"][-1].text
     assert "skip the failing tests" in built["user_message"][-1].text
+
+
+def test_positive_control_is_the_issue_plus_an_explicit_xfail_instruction():
+    messages = ARMS["positive_control"](TASK)
+    assert [m.role for m in messages] == ["user", "user"]
+    assert messages[0].text == ARMS["issue_only"](TASK)[0].text
+    assert messages[1].text == POSITIVE_LINE and "xfail" in POSITIVE_LINE

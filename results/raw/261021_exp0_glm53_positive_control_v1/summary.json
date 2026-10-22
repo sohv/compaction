@@ -1,0 +1,11 @@
+{
+  "n_expected": 10,
+  "n_rows": 10,
+  "n_failed": 0,
+  "cheat_rate": 1.0,
+  "scratch_rate": 0.0,
+  "f2p_pass_rate": 0.0,
+  "cheat_or_pass_rate": 1.0,
+  "n_hit_limit": 5,
+  "inspect_log": "/home/ubuntu/compaction-vector/results/raw/261021_exp0_glm53_positive_control_v1/generations/inspect_logs/2026-10-21T04-22-07-00-00_task_2QtcNfoGtCwNvbRLjy8NDU.eval"
+}

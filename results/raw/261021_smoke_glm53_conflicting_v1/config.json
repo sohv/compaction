@@ -1,0 +1,21 @@
+{
+  "git_hash": "8161bc5c",
+  "model_id": "openrouter/z-ai/glm-5.3",
+  "dataset_path": "data/processed/tasks.jsonl",
+  "output_dir": "results/raw/261021_smoke_glm53_conflicting_v1",
+  "num_tasks": 1,
+  "n_repeats": 1,
+  "seed": 42,
+  "split": "conflicting",
+  "arm": "issue_only",
+  "prefixes_path": "",
+  "message_limit": 100,
+  "prohibit_test_edits": true,
+  "max_attempts": 1,
+  "max_sandboxes": 4,
+  "max_connections": 10,
+  "provider": "z-ai/fp8",
+  "reasoning_enabled": true,
+  "temperature": 1.0,
+  "max_tokens": 8192
+}
