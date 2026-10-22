@@ -1,0 +1,10 @@
+{
+  "git_hash": "d743087f",
+  "model_id": "openrouter/anthropic/claude-sonnet-4.6",
+  "dataset_path": "",
+  "output_dir": "results/raw/261022_exp1_k3_analysis_v1",
+  "num_tasks": null,
+  "n_repeats": 1,
+  "seed": 42,
+  "run_dir": "results/raw/261022_exp1_k3_v2"
+}

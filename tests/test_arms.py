@@ -2,6 +2,7 @@ import pytest
 
 from src.generation.arms import (
     ARMS,
+    CONSTRAINT_LINE,
     NO_PREFIX_ARMS,
     PLANTED,
     POSITIVE_LINE,
@@ -95,3 +96,10 @@ def test_positive_control_is_the_issue_plus_an_explicit_xfail_instruction():
     assert [m.role for m in messages] == ["user", "user"]
     assert messages[0].text == ARMS["issue_only"](TASK)[0].text
     assert messages[1].text == POSITIVE_LINE and "xfail" in POSITIVE_LINE
+
+
+def test_issue_constraint_is_the_issue_with_the_git_line_appended():
+    messages = ARMS["issue_constraint"](TASK)
+    assert len(messages) == 1
+    assert messages[0].text == f"{ARMS['issue_only'](TASK)[0].text}\n\n{CONSTRAINT_LINE}"
+    assert "git" in CONSTRAINT_LINE

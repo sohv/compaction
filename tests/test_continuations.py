@@ -7,9 +7,11 @@ from src.generation.continuations import (
     BENIGN_PATH,
     CODEX_COMPACT_PROMPT,
     SKIP_LINE,
+    SUMMARY_CONSTRAINT_LINE,
     TOTAL_MESSAGES,
     continuation_messages,
     find_cut,
+    first_pass_cut,
     message_budget,
     replay_calls,
     summary_request,
@@ -109,3 +111,46 @@ def test_benign_arms_deliver_the_same_decision_from_summary_user_and_own_think_c
     assert own[2].tool_calls[0].function == "think"
     assert own[2].tool_calls[0].arguments == {"thought": BENIGN_LINES["self"]}
     assert all(BENIGN_PATH in line for line in BENIGN_LINES.values())
+
+
+def test_summary_constraint_appends_the_constraint_as_the_last_summary_line():
+    issue = MESSAGES[1].text
+    built = continuation_messages("summary_constraint", MESSAGES, 8, "S")
+    assert [m.text for m in built] == [issue, COMPACTION.format(summary=f"S\n\n{SUMMARY_CONSTRAINT_LINE}")]
+
+
+def test_pass_cut_is_the_first_test_run_where_the_target_test_passes():
+    passing = [
+        ChatMessageAssistant(content="", tool_calls=[call(9, "bash", command="pytest -rA pkg/tests/test_core.py")]),
+        ChatMessageTool(
+            content="PASSED pkg/tests/test_core.py::test_parse\n1 passed", tool_call_id="c9", function="bash"
+        ),
+    ]
+    assert first_pass_cut(MESSAGES, TASK) is None
+    assert first_pass_cut([*MESSAGES, *passing], TASK) == len(MESSAGES) + 1
+
+
+def test_a_run_where_the_target_line_fails_is_not_a_pass_even_if_others_pass():
+    mixed = [
+        ChatMessageAssistant(content="", tool_calls=[call(9, "bash", command="bin/test pkg/tests/test_core.py")]),
+        ChatMessageTool(content="test_other ok\ntest_parse F\n[FAIL]", tool_call_id="c9", function="bash"),
+    ]
+    assert first_pass_cut([*MESSAGES[:2], *mixed], TASK) is None
+    sympy_style = [
+        mixed[0],
+        ChatMessageTool(content="test_other ok\ntest_parse ok\n[OK]", tool_call_id="c9", function="bash"),
+    ]
+    assert first_pass_cut([*MESSAGES[:2], *sympy_style], TASK) == 3
+
+
+def test_pass_cut_matches_the_test_name_as_a_whole_word_only():
+    task = {"FAIL_TO_PASS": ["test_Printer"], "problem_statement": "x"}
+    run = ChatMessageAssistant(
+        content="", tool_calls=[call(9, "bash", command="bin/test sympy/printing/tests/test_x.py")]
+    )
+    prefix_only = ChatMessageTool(
+        content="test_Printer_standard ok\ntest_Printer F", tool_call_id="c9", function="bash"
+    )
+    assert first_pass_cut([*MESSAGES[:2], run, prefix_only], task) is None
+    real = ChatMessageTool(content="test_Printer ok\ntest_Printer_standard ok", tool_call_id="c9", function="bash")
+    assert first_pass_cut([*MESSAGES[:2], run, real], task) == 3

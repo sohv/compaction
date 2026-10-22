@@ -12,10 +12,18 @@ from inspect_ai.log import read_eval_log
 from inspect_ai.tool import bash, python, text_editor, think
 
 from src.data.io import load_jsonl
-from src.generation.continuations import cut_call, find_cut, message_budget, summary_request, target_test_name
+from src.generation.continuations import (
+    cut_call,
+    find_cut,
+    first_cut,
+    message_budget,
+    summary_request,
+    target_test_name,
+)
 from src.generation.rollout_io import openrouter_model
 from src.generation.swe_agent import THINK_DESCRIPTION
-from src.metrics.io import write_jsonl
+from src.metrics.constraint import git_violations
+from src.metrics.io import write_json, write_jsonl
 from src.utils.config import Config, write_config_json
 from src.utils.logging import setup_logging
 from src.utils.seed import set_seed
@@ -29,6 +37,8 @@ MAX_SUMMARY_ATTEMPTS = 3
 class CutsConfig(Config):
     source_log: str = ""  # the experiment 0 issue_only inspect log the transcripts come from
     epoch: int = 1
+    git_compliant: bool = False  # experiment 4c: take the first epoch up to max_epoch that ran no git before the cut
+    max_epoch: int = 2
     provider: str = ""
     reasoning_enabled: bool | None = None
     temperature: float | None = None
@@ -56,6 +66,24 @@ async def summarize(model, samples: list, cuts: list[int]) -> list:
     return await asyncio.gather(*[summarize_one(model, s.messages, cut) for s, cut in zip(samples, cuts)])
 
 
+def select_git_compliant(log, tasks: dict, max_epoch: int) -> tuple[list, dict]:
+    """Per task, the first epoch with a cut and no git call before it; a task with none is dropped and reported."""
+    samples, selection = [], {}
+    for task_id, task in tasks.items():
+        epochs = {s.epoch: s for s in log.samples if s.id == task_id}
+        report = {}
+        for epoch in range(1, max_epoch + 1):
+            cut = first_cut(epochs[epoch].messages, task)
+            violation = git_violations(epochs[epoch].messages[: cut + 1]) if cut is not None else None
+            report[epoch] = {"cut": cut, "git_before_cut": violation["commands"] if violation else None}
+            if cut is not None and not violation["violated"]:
+                samples.append(epochs[epoch])
+                report["chosen_epoch"] = epoch
+                break
+        selection[task_id] = report
+    return samples, selection
+
+
 def main():
     config = simple_parsing.parse(CutsConfig, add_config_path_arg=True)
     assert config.dataset_path and config.source_log, "--dataset_path and --source_log are required"
@@ -67,10 +95,15 @@ def main():
 
     tasks = {t["id"]: t for t in load_jsonl(config.dataset_path, config.num_tasks)}
     log = read_eval_log(config.source_log)
-    samples = sorted(
-        [s for s in log.samples if s.epoch == config.epoch and s.id in tasks], key=lambda s: list(tasks).index(s.id)
-    )
-    assert len(samples) == len(tasks), f"expected one epoch {config.epoch} transcript per task, got {len(samples)}"
+    if config.git_compliant:
+        samples, selection = select_git_compliant(log, tasks, config.max_epoch)
+        write_json(selection, output_dir / "selection.json")
+        LOGGER.info(f"{len(samples)} of {len(tasks)} tasks have a transcript with no git before the cut")
+    else:
+        samples = sorted(
+            [s for s in log.samples if s.epoch == config.epoch and s.id in tasks], key=lambda s: list(tasks).index(s.id)
+        )
+        assert len(samples) == len(tasks), f"expected one epoch {config.epoch} transcript per task, got {len(samples)}"
     cuts = [find_cut(s.messages, tasks[s.id]) for s in samples]
 
     model = openrouter_model(

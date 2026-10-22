@@ -1,0 +1,9 @@
+{
+  "n_cheated": 13,
+  "n_kept": 10,
+  "dropped_no_pass_run": [
+    "261021_exp23_k3_full_v1__scikit-learn__scikit-learn-13124__epoch3",
+    "261021_exp23_k3_full_v1__sympy__sympy-24443__epoch3",
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch5"
+  ]
+}
