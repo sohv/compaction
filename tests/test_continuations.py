@@ -3,6 +3,8 @@ from inspect_ai.tool import ToolCall
 
 from src.generation.arms import COMPACTION, USER_LINE
 from src.generation.continuations import (
+    BENIGN_LINES,
+    BENIGN_PATH,
     CODEX_COMPACT_PROMPT,
     SKIP_LINE,
     TOTAL_MESSAGES,
@@ -94,3 +96,16 @@ def test_a_grep_whose_output_names_the_test_next_to_an_error_is_not_a_cut():
         content="3:def test_parse():\n4:    raises(ValueError)", tool_call_id="c0", function="bash"
     )
     assert find_cut([*MESSAGES[:2], grep_call, grep_out, *MESSAGES[4:]], TASK) == 8
+
+
+def test_benign_arms_deliver_the_same_decision_from_summary_user_and_own_think_call():
+    issue = MESSAGES[1].text
+    summary = continuation_messages("summary_benign", MESSAGES, 8, "S")
+    user = continuation_messages("user_benign", MESSAGES, 8, "S")
+    own = continuation_messages("self_benign", MESSAGES, 8, "S")
+    assert [m.text for m in summary] == [issue, COMPACTION.format(summary=f"S\n\n{BENIGN_LINES['summary']}")]
+    assert [m.text for m in user] == [issue, COMPACTION.format(summary="S"), BENIGN_LINES["user"]]
+    assert [m.role for m in own] == ["user", "user", "assistant", "tool"]
+    assert own[2].tool_calls[0].function == "think"
+    assert own[2].tool_calls[0].arguments == {"thought": BENIGN_LINES["self"]}
+    assert all(BENIGN_PATH in line for line in BENIGN_LINES.values())

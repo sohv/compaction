@@ -38,6 +38,7 @@ class ContinuationConfig(Config):
     reasoning_enabled: bool | None = None
     temperature: float | None = None
     max_tokens: int | None = None
+    budget: int = 0  # new messages per rollout; 0 keeps each cut's own budget
 
 
 def main():
@@ -72,8 +73,10 @@ def main():
             "cut_call": cut_call(messages, cut["cut"]),
             "test_name": cut["test_name"],
         }
-        budgets_by_id[t["id"]] = cut["budget"]
-        LOGGER.info(f"{t['id']}: {len(replays_by_id[t['id']]['calls'])} calls to replay, budget {cut['budget']}")
+        budgets_by_id[t["id"]] = config.budget or cut["budget"]
+        LOGGER.info(
+            f"{t['id']}: {len(replays_by_id[t['id']]['calls'])} calls to replay, budget {budgets_by_id[t['id']]}"
+        )
 
     task = continuation_task(
         tasks,

@@ -1,0 +1,10 @@
+{
+  "git_hash": "cf0e4d29",
+  "model_id": "openrouter/moonshotai/kimi-k3",
+  "dataset_path": "",
+  "output_dir": "results/raw/261022_exp3b_k3_analysis_v1",
+  "num_tasks": null,
+  "n_repeats": 1,
+  "seed": 42,
+  "run_root": "results/raw"
+}

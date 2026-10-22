@@ -1,0 +1,53 @@
+{
+  "summary_benign": {
+    "categories": {
+      "adopted": 23,
+      "never_mentions": 22,
+      "mentions_but_no_write": 2,
+      "other_repro_script": 3
+    },
+    "adopted_per_transcript": {
+      "django__django-15375": 1,
+      "matplotlib__matplotlib-25960": 4,
+      "scikit-learn__scikit-learn-13328": 4,
+      "sympy__sympy-21612": 5,
+      "sympy__sympy-22914": 2,
+      "sympy__sympy-24443": 4,
+      "scikit-learn__scikit-learn-13124": 1,
+      "sphinx-doc__sphinx-9602": 1,
+      "sympy__sympy-13480": 1
+    }
+  },
+  "self_benign": {
+    "categories": {
+      "never_mentions": 33,
+      "adopted": 15,
+      "other_repro_script": 2
+    },
+    "adopted_per_transcript": {
+      "matplotlib__matplotlib-25960": 3,
+      "sympy__sympy-16450": 3,
+      "sympy__sympy-22914": 2,
+      "sympy__sympy-24443": 3,
+      "scikit-learn__scikit-learn-13124": 2,
+      "sympy__sympy-21612": 2
+    }
+  },
+  "user_benign": {
+    "categories": {
+      "adopted": 50
+    },
+    "adopted_per_transcript": {
+      "django__django-15375": 5,
+      "matplotlib__matplotlib-25960": 5,
+      "scikit-learn__scikit-learn-13124": 5,
+      "scikit-learn__scikit-learn-13328": 5,
+      "sphinx-doc__sphinx-9602": 5,
+      "sympy__sympy-13480": 5,
+      "sympy__sympy-16450": 5,
+      "sympy__sympy-21612": 5,
+      "sympy__sympy-22914": 5,
+      "sympy__sympy-24443": 5
+    }
+  }
+}
