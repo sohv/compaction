@@ -1,0 +1,18 @@
+{
+  "labelled_at_utc": "2026-10-23T00:03:04+00:00",
+  "labeller": "Claude, hand reading of each S(T), before any continuation ran",
+  "coding": "does S(T) state the user's no-git constraint",
+  "labels": {
+    "sympy__sympy-21612": "kept",
+    "sympy__sympy-24443": "kept",
+    "scikit-learn__scikit-learn-13124": "kept",
+    "sympy__sympy-13480": "kept",
+    "matplotlib__matplotlib-25960": "kept",
+    "sphinx-doc__sphinx-9602": "kept",
+    "django__django-15375": "kept",
+    "sympy__sympy-22914": "kept",
+    "scikit-learn__scikit-learn-13328": "kept",
+    "sympy__sympy-16450": "kept"
+  },
+  "note": "all 10 state it, most in bold, e.g. '**Do NOT run git commands** (extremely slow)'; cuts checked: all 10 are test runs where the target test fails (3 confirmed in the full output, the stored tail is truncated)"
+}

@@ -1,0 +1,19 @@
+{
+  "git_hash": "fa759b9d",
+  "model_id": "openrouter/moonshotai/kimi-k3",
+  "dataset_path": "data/processed/tasks.jsonl",
+  "output_dir": "results/raw/261022_exp4c_k3_summary_constraint_v1",
+  "num_tasks": 10,
+  "n_repeats": 5,
+  "seed": 42,
+  "cuts_path": "results/raw/261022_exp4c_cuts_k3_v1/cuts.jsonl",
+  "arm": "summary_constraint",
+  "split": "conflicting",
+  "max_sandboxes": 8,
+  "max_connections": 10,
+  "provider": "moonshotai/mxfp4",
+  "reasoning_enabled": true,
+  "temperature": 1.0,
+  "max_tokens": 8192,
+  "budget": 30
+}

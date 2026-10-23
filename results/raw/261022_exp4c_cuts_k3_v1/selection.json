@@ -1,0 +1,72 @@
+{
+  "sympy__sympy-21612": {
+    "1": {
+      "cut": 42,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "sympy__sympy-24443": {
+    "1": {
+      "cut": 37,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "scikit-learn__scikit-learn-13124": {
+    "1": {
+      "cut": 75,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "sympy__sympy-13480": {
+    "1": {
+      "cut": 19,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "matplotlib__matplotlib-25960": {
+    "1": {
+      "cut": 25,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "sphinx-doc__sphinx-9602": {
+    "1": {
+      "cut": 11,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "django__django-15375": {
+    "1": {
+      "cut": 41,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "sympy__sympy-22914": {
+    "1": {
+      "cut": 19,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "scikit-learn__scikit-learn-13328": {
+    "1": {
+      "cut": 19,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  },
+  "sympy__sympy-16450": {
+    "1": {
+      "cut": 51,
+      "git_before_cut": []
+    },
+    "chosen_epoch": 1
+  }
+}
