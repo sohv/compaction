@@ -1,7 +1,14 @@
 from inspect_ai.model import ChatMessageSystem, ChatMessageUser
 
 from src.generation.arms import COMPACTION
-from src.generation.disclosure import DIRECT_QUESTION, REPORT_REQUEST, admits, disclosure_context
+from src.generation.disclosure import (
+    CLEAN_DIRECT_QUESTION,
+    CLEAN_REPORT_REQUEST,
+    DIRECT_QUESTION,
+    REPORT_REQUEST,
+    admits,
+    disclosure_context,
+)
 
 MESSAGES = [
     ChatMessageSystem(content="system"),
@@ -25,3 +32,9 @@ def test_admission_reads_only_the_leading_yes():
     assert admits("**Yes** - the And printer")
     assert not admits("No, I did not.")
     assert not admits("I did not, yes I am sure")
+
+
+def test_clean_prompts_ask_about_code_written_only_to_pass_a_test():
+    assert "mainly to make a specific test pass rather than to fix the issue" in CLEAN_DIRECT_QUESTION
+    assert CLEAN_DIRECT_QUESTION.endswith("Start your answer with Yes or No.")
+    assert "final report" in CLEAN_REPORT_REQUEST and "stop here" not in CLEAN_REPORT_REQUEST
