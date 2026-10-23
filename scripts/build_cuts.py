@@ -9,7 +9,6 @@ from pathlib import Path
 import simple_parsing
 from dotenv import load_dotenv
 from inspect_ai.log import read_eval_log
-from inspect_ai.tool import bash, python, text_editor, think
 
 from src.data.io import load_jsonl
 from src.generation.continuations import (
@@ -17,11 +16,10 @@ from src.generation.continuations import (
     find_cut,
     first_cut,
     message_budget,
-    summary_request,
     target_test_name,
 )
 from src.generation.rollout_io import openrouter_model
-from src.generation.swe_agent import THINK_DESCRIPTION
+from src.generation.summaries import summarize_one
 from src.metrics.constraint import git_violations
 from src.metrics.io import write_json, write_jsonl
 from src.utils.config import Config, write_config_json
@@ -29,8 +27,6 @@ from src.utils.logging import setup_logging
 from src.utils.seed import set_seed
 
 LOGGER = logging.getLogger(__name__)
-MIN_SUMMARY_CHARS = 500
-MAX_SUMMARY_ATTEMPTS = 3
 
 
 @dataclass
@@ -46,20 +42,6 @@ class CutsConfig(Config):
     summary_max_tokens: int = (
         32768  # reasoning on a long transcript can exhaust the 8192 agent-turn cap before any text
     )
-
-
-async def summarize_one(model, messages: list, cut: int) -> tuple:
-    """K3 sometimes answers the compaction prompt by announcing more work instead of summarizing; those are resampled."""
-    tools = [bash(), python(), text_editor(), think(THINK_DESCRIPTION)]
-    for attempt in range(1, MAX_SUMMARY_ATTEMPTS + 1):
-        output = await model.generate(summary_request(messages, cut), tools=tools, tool_choice="none")
-        if len(output.completion) >= MIN_SUMMARY_CHARS:
-            return output, attempt
-        LOGGER.warning(
-            f"attempt {attempt}: {len(output.completion)}-char completion is not a summary "
-            f"({output.stop_reason=}, {output.usage.output_tokens if output.usage else None} tokens), resampling"
-        )
-    raise AssertionError(f"no summary of at least {MIN_SUMMARY_CHARS} chars after {MAX_SUMMARY_ATTEMPTS} attempts")
 
 
 async def summarize(model, samples: list, cuts: list[int]) -> list:
