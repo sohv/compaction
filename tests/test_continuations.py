@@ -1,3 +1,4 @@
+import pytest
 from inspect_ai.model import (
     ChatMessageAssistant,
     ChatMessageSystem,
@@ -10,6 +11,9 @@ from inspect_ai.tool import ToolCall
 
 from src.generation.arms import COMPACTION, USER_LINE
 from src.generation.continuations import (
+    ATTRIBUTED_ACTIONS,
+    ATTRIBUTED_SOURCES,
+    ATTRIBUTED_TEMPLATE,
     BENIGN_LINES,
     BENIGN_PATH,
     CODEX_COMPACT_PROMPT,
@@ -200,3 +204,24 @@ def test_3c_arms_vary_compaction_position_and_attribution_one_at_a_time():
     message_self = continuation_messages("message_selfattr_benign", MESSAGES, 8, "S")
     assert [m.text for m in message_self] == [issue, COMPACTION.format(summary="S"), BENIGN_LINES["message_self"]]
     assert all(BENIGN_PATH in line for line in BENIGN_LINES.values())
+
+
+@pytest.mark.parametrize("action", sorted(ATTRIBUTED_ACTIONS))
+def test_attributed_arms_differ_only_in_the_source_phrase(action):
+    built = {src: continuation_messages(f"attr_{action}_{src}", MESSAGES, 8, "S") for src in ATTRIBUTED_SOURCES}
+    texts = {src: [m.text for m in msgs] for src, msgs in built.items()}
+    assert all(len(t) == 2 and t[0] == MESSAGES[1].text for t in texts.values())
+    for src, phrase in ATTRIBUTED_SOURCES.items():
+        line = ATTRIBUTED_TEMPLATE.format(action=ATTRIBUTED_ACTIONS[action], source=phrase)
+        assert texts[src][1] == COMPACTION.format(summary=f"S\n\n{line}")
+    # only the "decided by" clause may differ; the wrapper itself also contains the word "you"
+    neutral = {
+        src: t[1].replace(f"decided by {ATTRIBUTED_SOURCES[src]}.", "decided by <SRC>.") for src, t in texts.items()
+    }
+    assert len(set(neutral.values())) == 1
+
+
+def test_attributed_actions_name_the_checked_path_and_git():
+    assert BENIGN_PATH in ATTRIBUTED_ACTIONS["step"]
+    assert "git" in ATTRIBUTED_ACTIONS["nogit"]
+    assert set(ATTRIBUTED_SOURCES) == {"user", "self", "teammate"}

@@ -1,6 +1,6 @@
 import pytest
 
-from src.metrics.stats import cluster_bootstrap_diff, cluster_bootstrap_rate, holm
+from src.metrics.stats import cluster_bootstrap_diff, cluster_bootstrap_rate, holm, paired_permutation_p
 
 
 def rows(rates: dict[str, list[int]]) -> list[dict]:
@@ -42,3 +42,10 @@ def test_rate_interval_contains_the_rate_and_is_zero_width_when_every_cluster_ag
     assert mixed["rate"] == pytest.approx(0.5) and mixed["ci_low"] <= 0.5 <= mixed["ci_high"]
     flat = cluster_bootstrap_rate(rows({"t1": [0, 0], "t2": [0, 0]}), "cluster", "y", 2000, 0)
     assert (flat["ci_low"], flat["ci_high"]) == (0.0, 0.0)
+
+
+def test_paired_permutation_p_is_one_for_identical_arms_and_small_for_a_consistent_gap():
+    a = rows({f"t{i}": [1, 1, 1, 1, 1] for i in range(10)})
+    b = rows({f"t{i}": [0, 0, 0, 0, 0] for i in range(10)})
+    assert paired_permutation_p(a, a, "cluster", "y") == pytest.approx(1.0)
+    assert paired_permutation_p(a, b, "cluster", "y") < 0.01

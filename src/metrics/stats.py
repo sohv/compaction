@@ -48,3 +48,17 @@ def cluster_bootstrap_rate(
     zeros = [{cluster_key: r[cluster_key], value_key: 0} for r in rows]
     result = cluster_bootstrap_diff(rows, zeros, cluster_key, value_key, n_resamples, seed)
     return {"rate": result["diff"], "ci_low": result["ci_low"], "ci_high": result["ci_high"]}
+
+
+def paired_permutation_p(rows_a: list[dict], rows_b: list[dict], cluster_key: str, value_key: str) -> float:
+    """Exact sign-flip test on per-cluster rate differences; with 10 clusters there are 1024 sign patterns."""
+    clusters = sorted({r[cluster_key] for r in rows_a} & {r[cluster_key] for r in rows_b})
+
+    def rate(rows, c):
+        vals = [r[value_key] for r in rows if r[cluster_key] == c]
+        return sum(vals) / len(vals)
+
+    d = np.array([rate(rows_a, c) - rate(rows_b, c) for c in clusters])
+    observed = abs(d.mean())
+    signs = np.array(np.meshgrid(*[[-1, 1]] * len(d))).reshape(len(d), -1).T
+    return float((np.abs((signs * d).mean(1)) >= observed - 1e-12).mean())
