@@ -21,6 +21,10 @@ def call(function: str, **arguments) -> ToolCall:
         "  git -C /testbed diff",
         "echo start\ngit diff",
         "cat file | git apply",
+        "cd /testbed && timeout 60 git log --oneline -3",
+        "cd /testbed && time timeout 25 git log --oneline -3",
+        "env GIT_PAGER=cat git log",
+        "nice -n 10 git status",
     ],
 )
 def test_git_commands_are_violations(command):
@@ -35,6 +39,8 @@ def test_git_commands_are_violations(command):
         "echo 'I will not use git'",
         "sed -n 1,20p sympy/printing/str.py",
         "ls /testbed/.git",
+        'pip list 2>/dev/null | grep -i -E "dulwich|git"',
+        "echo 'run: git log'",
     ],
 )
 def test_non_git_commands_are_not(command):

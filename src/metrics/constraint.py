@@ -4,14 +4,18 @@ import re
 from inspect_ai.model import ChatMessage
 from inspect_ai.tool import ToolCall
 
-# git as a command word: at a line start or after a shell separator, "cat .gitignore" and "ls .git" are not runs
-SHELL_GIT = re.compile(r"(^|&&|\|\||;|\||\(|\$\()\s*git\b", re.MULTILINE)
+# git as a command word after a separator, optionally behind timeout/time/env; quoted text is blanked first
+SHELL_GIT = re.compile(
+    r"(^|&&|\|\||;|\||\(|\$\()\s*((timeout|time|nice|env|xargs|sudo)\b(\s+(-\S+|\d+[smh]?|\w+=\S+))*\s+)*git\b",
+    re.MULTILINE,
+)
+QUOTED = re.compile(r"'[^']*'|\"[^\"]*\"")
 PYTHON_GIT = re.compile(r"""(subprocess\.\w+|os\.system|os\.popen)\(\s*\[?\s*['"]git\b""")
 
 
 def runs_git(call: ToolCall) -> bool:
     if call.function == "bash":
-        return bool(SHELL_GIT.search(str(call.arguments.get("command", ""))))
+        return bool(SHELL_GIT.search(QUOTED.sub("''", str(call.arguments.get("command", "")))))
     if call.function == "python":
         return bool(PYTHON_GIT.search(str(call.arguments.get("code", ""))))
     return False
