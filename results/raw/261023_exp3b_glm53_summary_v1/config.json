@@ -1,0 +1,22 @@
+{
+  "git_hash": "f1a38f8c",
+  "model_id": "openrouter/z-ai/glm-5.3",
+  "dataset_path": "data/processed/tasks.jsonl",
+  "output_dir": "results/raw/261023_exp3b_glm53_summary_v1",
+  "num_tasks": 10,
+  "n_repeats": 5,
+  "seed": 42,
+  "cuts_path": "results/raw/261023_cuts_glm53_v2/cuts.jsonl",
+  "arm": "summary",
+  "split": "conflicting",
+  "max_sandboxes": 8,
+  "max_connections": 10,
+  "provider": "z-ai/fp8",
+  "reasoning_enabled": true,
+  "temperature": 1.0,
+  "max_tokens": 8192,
+  "budget": 30,
+  "summary_field": "summary",
+  "closing": "",
+  "expect_at_cut": "fail"
+}

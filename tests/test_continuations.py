@@ -1,4 +1,11 @@
-from inspect_ai.model import ChatMessageAssistant, ChatMessageSystem, ChatMessageTool, ChatMessageUser
+from inspect_ai.model import (
+    ChatMessageAssistant,
+    ChatMessageSystem,
+    ChatMessageTool,
+    ChatMessageUser,
+    ContentReasoning,
+    ContentText,
+)
 from inspect_ai.tool import ToolCall
 
 from src.generation.arms import COMPACTION, USER_LINE
@@ -14,6 +21,8 @@ from src.generation.continuations import (
     first_pass_cut,
     message_budget,
     replay_calls,
+    shows_fail,
+    shows_pass,
     summary_request,
 )
 
@@ -154,3 +163,40 @@ def test_pass_cut_matches_the_test_name_as_a_whole_word_only():
     assert first_pass_cut([*MESSAGES[:2], run, prefix_only], task) is None
     real = ChatMessageTool(content="test_Printer ok\ntest_Printer_standard ok", tool_call_id="c9", function="bash")
     assert first_pass_cut([*MESSAGES[:2], run, real], task) == 3
+
+
+def test_shows_pass_and_shows_fail_read_one_line_with_the_whole_test_name():
+    assert shows_pass("test_parse ok\n", "test_parse")
+    assert not shows_pass("test_parse_extra ok\ntest_parse F", "test_parse")
+    assert shows_fail("FAILED pkg/tests/test_core.py::test_parse - assert", "test_parse")
+    assert not shows_fail("test_parse ok", "test_parse")
+
+
+def test_full_noreason_drops_reasoning_blocks_and_keeps_everything_else():
+    with_reasoning = ChatMessageAssistant(
+        content=[ContentReasoning(reasoning="secret plan"), ContentText(text="visible")],
+        tool_calls=[call(5, "bash", command="ls")],
+    )
+    messages = [*MESSAGES[:2], with_reasoning, ChatMessageTool(content="out", tool_call_id="c5", function="bash")]
+    built = continuation_messages("full_noreason", messages, 3, "S")
+    assert [m.role for m in built] == ["user", "assistant", "tool"]
+    assert built[1].text == "visible" and "secret plan" not in str(built[1].content)
+    assert built[1].tool_calls[0].id == "c5"
+    assert "secret plan" in str(messages[2].content)
+
+
+def test_3c_arms_vary_compaction_position_and_attribution_one_at_a_time():
+    issue = MESSAGES[1].text
+    full_user = continuation_messages("full_user_benign", MESSAGES, 8, "S")
+    full_self = continuation_messages("full_self_benign", MESSAGES, 8, "S")
+    assert [m.role for m in full_user[:-1]] == [m.role for m in MESSAGES[1:9]]
+    assert full_user[-1].role == "user" and full_user[-1].text == BENIGN_LINES["user"]
+    assert full_self[-2].tool_calls[0].arguments == {"thought": BENIGN_LINES["self"]} and full_self[-1].role == "tool"
+    in_summary_user = continuation_messages("summary_userattr_benign", MESSAGES, 8, "S")
+    assert [m.text for m in in_summary_user] == [
+        issue,
+        COMPACTION.format(summary=f"S\n\n{BENIGN_LINES['summary_user']}"),
+    ]
+    message_self = continuation_messages("message_selfattr_benign", MESSAGES, 8, "S")
+    assert [m.text for m in message_self] == [issue, COMPACTION.format(summary="S"), BENIGN_LINES["message_self"]]
+    assert all(BENIGN_PATH in line for line in BENIGN_LINES.values())

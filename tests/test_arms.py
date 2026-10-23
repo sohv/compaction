@@ -1,6 +1,7 @@
 import pytest
 
 from src.generation.arms import (
+    ALL_TESTS_LINE,
     ARMS,
     CONSTRAINT_LINE,
     NO_PREFIX_ARMS,
@@ -103,3 +104,10 @@ def test_issue_constraint_is_the_issue_with_the_git_line_appended():
     assert len(messages) == 1
     assert messages[0].text == f"{ARMS['issue_only'](TASK)[0].text}\n\n{CONSTRAINT_LINE}"
     assert "git" in CONSTRAINT_LINE
+
+
+def test_issue_all_tests_is_the_issue_with_the_all_tests_request_appended():
+    messages = ARMS["issue_all_tests"](TASK)
+    assert len(messages) == 1
+    assert messages[0].text == f"{ARMS['issue_only'](TASK)[0].text}\n\n{ALL_TESTS_LINE}"
+    assert "issue_all_tests" in NO_PREFIX_ARMS

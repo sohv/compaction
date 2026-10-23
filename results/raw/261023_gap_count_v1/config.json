@@ -1,0 +1,9 @@
+{
+  "git_hash": "f1a38f8c",
+  "model_id": "openrouter/moonshotai/kimi-k3",
+  "dataset_path": "",
+  "output_dir": "results/raw/261023_gap_count_v1",
+  "num_tasks": null,
+  "n_repeats": 1,
+  "seed": 42
+}

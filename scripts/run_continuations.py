@@ -9,6 +9,7 @@ import simple_parsing
 from dotenv import load_dotenv
 from inspect_ai import eval
 from inspect_ai.log import read_eval_log
+from inspect_ai.model import ChatMessageUser
 
 from src.data.io import load_jsonl
 from src.generation.continuations import (
@@ -39,12 +40,16 @@ class ContinuationConfig(Config):
     temperature: float | None = None
     max_tokens: int | None = None
     budget: int = 0  # new messages per rollout; 0 keeps each cut's own budget
+    summary_field: str = "summary"  # which cuts.jsonl field holds this arm's S(T), e.g. an edited copy
+    closing: str = ""  # a user message appended to every context, empty for none
+    expect_at_cut: str = "fail"  # what the replay check expects of the target test at the cut
 
 
 def main():
     config = simple_parsing.parse(ContinuationConfig, add_config_path_arg=True)
     assert config.dataset_path and config.cuts_path, "--dataset_path and --cuts_path are required"
     assert config.arm in ARMS, f"unknown arm {config.arm}, choose from {ARMS}"
+    assert config.expect_at_cut in ("fail", "pass"), f"unknown expect_at_cut {config.expect_at_cut}"
     load_dotenv()
     output_dir = Path(config.output_dir)
     setup_logging(output_dir)
@@ -67,11 +72,13 @@ def main():
     messages_by_id, replays_by_id, budgets_by_id = {}, {}, {}
     for t in tasks:
         cut, messages = cuts[t["id"]], transcripts[t["id"]]
-        messages_by_id[t["id"]] = continuation_messages(config.arm, messages, cut["cut"], cut["summary"])
+        context = continuation_messages(config.arm, messages, cut["cut"], cut[config.summary_field])
+        messages_by_id[t["id"]] = [*context, ChatMessageUser(content=config.closing)] if config.closing else context
         replays_by_id[t["id"]] = {
             "calls": replay_calls(messages, cut["cut"]),
             "cut_call": cut_call(messages, cut["cut"]),
             "test_name": cut["test_name"],
+            "expect": config.expect_at_cut,
         }
         budgets_by_id[t["id"]] = config.budget or cut["budget"]
         LOGGER.info(

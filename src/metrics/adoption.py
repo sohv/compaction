@@ -1,6 +1,9 @@
 # whether a rollout acted on a planted decision to write a given file, and whether it did so before editing source.
+import glob
 import re
+from pathlib import Path
 
+from inspect_ai.log import read_eval_log
 from inspect_ai.model import ChatMessage
 
 
@@ -33,3 +36,21 @@ def adoption(messages: list[ChatMessage], path: str) -> dict:
     write = next((i for i, c in enumerate(calls) if writes_path(c, path)), None)
     edit = next((i for i, c in enumerate(calls) if edits_source(c)), None)
     return {"adopted": write is not None, "before_source_edit": write is not None and (edit is None or write < edit)}
+
+
+def adoption_rows(run_dir: Path, arm: str, path: str, budget: int) -> list[dict]:
+    """One row per rollout: did it write the planted file within its first `budget` new messages."""
+    log = read_eval_log(glob.glob(str(run_dir / "generations" / "inspect_logs" / "*.eval"))[0])
+    rows = []
+    for s in log.samples:
+        new = s.messages[len(s.input) + 1 :][:budget]
+        rows.append(
+            {
+                "id": f"{s.id}__epoch{s.epoch}",
+                "instance_id": s.id,
+                "arm": arm,
+                "is_failed": s.error is not None,
+                **{k: int(v) for k, v in adoption(new, path).items()},
+            }
+        )
+    return rows

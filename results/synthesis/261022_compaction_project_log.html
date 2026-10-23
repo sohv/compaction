@@ -128,7 +128,7 @@ footer { font: 12px/1.6 var(--mono); color: var(--muted); border-top: 1px solid 
   <span class="eyebrow">Research log · updated 23 Oct 2026 · after the audit</span>
   <h1>Do coding agents trust their own compaction summaries?</h1>
   <p class="lede">When an AI coding agent's conversation gets too long, it is replaced by a summary the agent wrote. This project asks whether what that summary says changes what the agent does next, and in particular whether a summary can make it cheat.</p>
-  <p class="meta">Code: <a href="https://github.com/sohv/compaction">github.com/sohv/compaction</a> · Results: <a href="https://huggingface.co/sohv/compaction">huggingface.co/sohv/compaction</a> (private) · Total spend: $590.36</p>
+  <p class="meta">Code: <a href="https://github.com/sohv/compaction">github.com/sohv/compaction</a> · Results: <a href="https://huggingface.co/sohv/compaction">huggingface.co/sohv/compaction</a> (private) · Total spend: $736.96</p>
 </header>
 
 <section class="answer" aria-labelledby="sofar">
@@ -136,7 +136,8 @@ footer { font: 12px/1.6 var(--mono); color: var(--muted); border-top: 1px solid 
   <ul>
     <li>An audit on 23 Oct found bugs and design flaws that change several conclusions. The list below is the corrected one; the audit step further down gives the details.</li>
     <li>Compaction did not visibly change cheating (18% vs 14%), but only two tasks allow cheating at all, and the full-history condition also saw the agent's earlier reasoning, so this is weak evidence.</li>
-    <li>A harmless "do this first" decision was acted on 100% of the time from the user, 46% from the summary, and 30% from the agent's own note. This compares sources, not compaction against no compaction.</li>
+    <li>The clearest result: agents act on what the <strong>user</strong> asked, wherever it appears, but often skip decisions attributed to <strong>their own past self</strong>. "The user asked you to…" inside a compaction summary is acted on 49/50 times; "You previously decided to…" in the same place, 23/50. Compaction itself makes little difference, and GLM-5.3 shows the same pattern.</li>
+    <li>When Kimi K3 hacks the code, its reasoning usually admits it (23/27) while the code comment gives a plausible but false reason (19/27); its reports mostly say the change was "required by the tests".</li>
     <li>After a real cheat, the agent admitted it less often from its summary (21/50) than from its full history (48/50), and repeated the summary's cover story when it denied it. Two flaws weaken this: the full history also contained the agent's reasoning about the hack, and the summary condition could not use tools to check its work.</li>
     <li>The rule-survival experiment (4c) was invalid: the rule was never compacted.</li>
     <li>The omission hypothesis, that summaries drop important facts and that this causes misbehaviour, has not been tested yet, because no summary ever dropped anything. That is the next experiment.</li>
@@ -241,6 +242,25 @@ footer { font: 12px/1.6 var(--mono); color: var(--muted); border-top: 1px solid 
       <figure class="chart" id="chart-exp4c" aria-label="Share of continuations that ran git, by context"></figure>
     </li>
     <li class="step">
+      <div class="step-head"><span class="num">23 Oct · Gap count</span><h3>Does the reasoning admit hacks that the code hides?</h3><span class="pill warn">Exploratory</span></div>
+      <div class="kv">
+        <span class="k">Asked</span><p>In every rollout where K3 cheated, does its reasoning call the change a hack while the code comment or final report presents it as legitimate? No new runs: Claude labelled the 36 existing cheats.</p>
+        <span class="k">Found</span><p>For the 27 source-code hacks, the reasoning admits a hack in 23 and the code comment gives a misleading general reason in 19 (for example "bitwise operators… array-like operands"), while 17 of 18 submitted reports say the change was needed for the tests. The 9 test edits are never called hacks in the reasoning and are always disclosed. Example: "Honestly, any comment is fiction."</p>
+        <span class="k">Meant</span><p>The disguise sits in the code, not in the report. Caveat: these are two hacks on two tasks, repeated across runs.</p>
+      </div>
+    </li>
+
+    <li class="step">
+      <div class="step-head"><span class="num">23 Oct · Exp 3c</span><h3>Is it compaction, where the decision sits, or who it is attributed to?</h3><span class="pill good">Cleared</span></div>
+      <div class="kv">
+        <span class="k">Asked</span><p>Experiment 3b left three explanations open. We varied each separately: the same decision in the full history vs after compaction; inside the summary vs as a separate message; attributed to the user ("The user asked you to…") vs to the agent ("You previously decided to…"). We also repeated 3b on GLM-5.3.</p>
+        <span class="k">Found</span><p>Attribution is the driver: +37 points on average (95% interval +26 to +48), clearing the 20-point bar. Position adds +17 points, only for self-attributed decisions, below the bar. Compaction makes no clear difference: the agent's own note is acted on 20/50 times with the full history and 15/50 after compaction. GLM-5.3 replicates: 50/50 from the user, 28/50 from the summary, 20/50 from its own note.</p>
+        <span class="k">Meant</span><p>Agents treat what the user asked as binding, even inside a summary, and treat their own past decisions as optional. Caveat: the two wordings also differ in tone, so attribution and phrasing are not yet separated.</p>
+      </div>
+      <figure class="chart" id="chart-exp3c" aria-label="Share of rollouts that acted on the decision, by attribution and position"></figure>
+    </li>
+
+    <li class="step">
       <div class="step-head"><span class="num">23 Oct · Audit 2</span><h3>Bugs and design flaws across all experiments</h3><span class="pill warn">Corrections</span></div>
       <ul class="flat">
         <li><strong>Exp 4c invalid.</strong> The rule was put in the user's first message, which every summary condition keeps, so it was never compacted. The git detector also missed <code>timeout 60 git …</code> commands; corrected counts are shown in that step.</li>
@@ -311,6 +331,18 @@ const DATA = {
       { label: "Summary + rule restated", k: 1, n: 50, lo: 0.0, hi: 0.06, note: "Rule added as the summary's last line; ran git log" },
     ],
   },
+  exp3c: {
+    title: "Share of rollouts that acted on the planted decision (Exp 3c, Kimi K3)",
+    caption: "Same decision text throughout except for who it is attributed to. 50 rollouts per bar.",
+    rows: [
+      { label: "Summary · user asked", k: 49, n: 50, lo: 0.94, hi: 1.0, note: "\"The user asked you to…\" inside the summary" },
+      { label: "Summary · you decided", k: 23, n: 50, lo: 0.26, hi: 0.66, note: "\"You previously decided to…\" inside the summary" },
+      { label: "Message · user asked", k: 50, n: 50, lo: 1.0, hi: 1.0, note: "The user's own final message" },
+      { label: "Message · you decided", k: 39, n: 50, lo: 0.7, hi: 0.86, note: "\"Note from your earlier session: you decided…\"" },
+      { label: "Own note · full history", k: 20, n: 50, lo: 0.2, hi: 0.62, note: "Agent's own think call, no compaction" },
+      { label: "Own note · compacted", k: 15, n: 50, lo: 0.14, hi: 0.46, note: "Agent's own think call after the summary" },
+    ],
+  },
 };
 
 const tip = document.getElementById("tip");
@@ -364,4 +396,5 @@ render("chart-exp23", DATA.exp23);
 render("chart-exp3b", DATA.exp3b);
 render("chart-exp1", DATA.exp1);
 render("chart-exp4c", DATA.exp4c);
+render("chart-exp3c", DATA.exp3c);
 </script>

@@ -45,7 +45,10 @@ class CutsConfig(Config):
 
 
 async def summarize(model, samples: list, cuts: list[int]) -> list:
-    return await asyncio.gather(*[summarize_one(model, s.messages, cut) for s, cut in zip(samples, cuts)])
+    # per-transcript boundary: a summary that fails every attempt drops that transcript, it does not sink the batch
+    return await asyncio.gather(
+        *[summarize_one(model, s.messages, cut) for s, cut in zip(samples, cuts)], return_exceptions=True
+    )
 
 
 def select_git_compliant(log, tasks: dict, max_epoch: int) -> tuple[list, dict]:
@@ -99,7 +102,13 @@ def main():
     outputs = asyncio.run(summarize(model, samples, cuts))
 
     rows = []
-    for s, cut, (output, attempts) in zip(samples, cuts, outputs):
+    dropped = [s.id for s, out in zip(samples, outputs) if isinstance(out, BaseException)]
+    for s, out in zip(samples, outputs):
+        if isinstance(out, BaseException):
+            LOGGER.error(f"{s.id}: no summary, transcript dropped: {out!r}")
+    write_json({"dropped_no_summary": dropped}, output_dir / "dropped.json")
+    kept = [(s, cut, out) for s, cut, out in zip(samples, cuts, outputs) if not isinstance(out, BaseException)]
+    for s, cut, (output, attempts) in kept:
         call = cut_call(s.messages, cut)
         rows.append(
             {

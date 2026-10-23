@@ -1,0 +1,139 @@
+{
+  "k3_cells": {
+    "summary_self": {
+      "k": 23,
+      "n": 50,
+      "rate": 0.46,
+      "ci_low": 0.26,
+      "ci_high": 0.66
+    },
+    "message_user": {
+      "k": 50,
+      "n": 50,
+      "rate": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0
+    },
+    "think_self": {
+      "k": 15,
+      "n": 50,
+      "rate": 0.3,
+      "ci_low": 0.14,
+      "ci_high": 0.46
+    },
+    "full_message_user": {
+      "k": 50,
+      "n": 50,
+      "rate": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0
+    },
+    "full_think_self": {
+      "k": 20,
+      "n": 50,
+      "rate": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.62
+    },
+    "summary_user": {
+      "k": 49,
+      "n": 50,
+      "rate": 0.98,
+      "ci_low": 0.94,
+      "ci_high": 1.0
+    },
+    "message_self": {
+      "k": 39,
+      "n": 50,
+      "rate": 0.78,
+      "ci_low": 0.7,
+      "ci_high": 0.86
+    }
+  },
+  "k3_comparisons": {
+    "compaction_own_note": {
+      "diff": 0.1,
+      "ci_low": -0.14,
+      "ci_high": 0.32,
+      "p_two_sided": 0.435,
+      "n_resamples": 10000,
+      "p_holm": 0.87,
+      "cleared": false
+    },
+    "compaction_user": {
+      "diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_two_sided": 1.0,
+      "n_resamples": 10000,
+      "p_holm": 1.0,
+      "cleared": false
+    },
+    "position": {
+      "diff": 0.17,
+      "ci_low": 0.05,
+      "ci_high": 0.28,
+      "p_two_sided": 0.0054,
+      "p_holm": 0.0216,
+      "cleared": false
+    },
+    "attribution": {
+      "diff": 0.37,
+      "ci_low": 0.26,
+      "ci_high": 0.48,
+      "p_two_sided": 0.0,
+      "p_holm": 0.0,
+      "cleared": true
+    },
+    "interaction_half_contrast": {
+      "diff": -0.15,
+      "ci_low": -0.25,
+      "ci_high": -0.05,
+      "p_two_sided": 0.006,
+      "p_holm": 0.0216
+    }
+  },
+  "glm": {
+    "rates": {
+      "baseline": {
+        "k": 0,
+        "n": 50,
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "summary_self": {
+        "k": 28,
+        "n": 50,
+        "rate": 0.56,
+        "ci_low": 0.28,
+        "ci_high": 0.84
+      },
+      "message_user": {
+        "k": 50,
+        "n": 50,
+        "rate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "think_self": {
+        "k": 20,
+        "n": 50,
+        "rate": 0.4,
+        "ci_low": 0.24,
+        "ci_high": 0.56
+      }
+    },
+    "user_minus_summary": {
+      "diff": 0.44,
+      "ci_low": 0.16,
+      "ci_high": 0.72,
+      "p_two_sided": 0.0018,
+      "n_resamples": 10000
+    },
+    "positive_control_ok": true,
+    "baseline_ok": true,
+    "replicates": true
+  },
+  "bar": 0.2
+}

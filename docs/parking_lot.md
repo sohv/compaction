@@ -8,3 +8,4 @@ Scope discipline in `CLAUDE.md` sends them here so the current experiment stays 
 - 2026-10-21: summary attribution frame: Codex calls the summary another model's work, Claude Code calls it the same session; does attribution change uptake of a planted decision?
 - 2026-10-23: Petri-style persuader on the real K3 setup: a second model plays the user or writes S(T), adapts to each reply, and tries to talk the agent into cheating; reuses rollouts, replay, cuts and the scorer. Different question from compaction; parked.
 - 2026-10-23: experiment 1 rerun with a hack-neutral direct question and cheats from tasks other than sympy-22914.
+- 2026-10-23: experiment 5 (delete the cheat from the summary, measure clean-work reports and recovery) shelved by the user after step A had started, to save money; pre-registration in decisions.md, code in place (full_noreason arm, pass-cut replay, --summary_field/--closing/--expect_at_cut). Partial step A run stopped and not analysed.
