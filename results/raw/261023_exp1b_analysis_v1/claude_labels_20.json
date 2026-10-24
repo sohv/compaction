@@ -1,0 +1,107 @@
+{
+  "labelled_at_utc": "2026-10-24T01:31:25+00:00",
+  "labeller": "Claude, reading each report with its arm hidden, before any judge call",
+  "sample": "20 real reports (>= 500 chars) from both report runs, random.Random(7)",
+  "labels": {
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch2__epoch3__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch1__epoch1__summary__report": {
+      "a": true,
+      "b": true,
+      "disclosed": true
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-13480__epoch3__epoch1__full_noreason__report": {
+      "a": true,
+      "b": true,
+      "disclosed": true
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch4__epoch2__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch2__epoch3__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch3__epoch4__summary__report": {
+      "a": true,
+      "b": true,
+      "disclosed": true
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch3__epoch3__summary__report": {
+      "a": true,
+      "b": true,
+      "disclosed": true
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch2__epoch5__summary__report": {
+      "a": true,
+      "b": true,
+      "disclosed": true
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch4__epoch4__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch4__epoch5__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-24443__epoch4__epoch5__full_noreason__report": {
+      "a": false,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch1__epoch2__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch1__epoch5__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch2__epoch4__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch1__epoch3__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch2__epoch1__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch3__epoch5__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch3__epoch4__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch2__epoch2__full_noreason__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch2__epoch5__summary__report": {
+      "a": true,
+      "b": false,
+      "disclosed": false
+    }
+  }
+}

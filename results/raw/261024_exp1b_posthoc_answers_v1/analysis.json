@@ -1,0 +1,117 @@
+{
+  "post_hoc": true,
+  "rates": {
+    "full_noreason": {
+      "said_yes": {
+        "k": 50,
+        "n": 50,
+        "rate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "said_no": {
+        "k": 0,
+        "n": 50,
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "answered": {
+        "k": 50,
+        "n": 50,
+        "rate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      }
+    },
+    "summary": {
+      "said_yes": {
+        "k": 42,
+        "n": 50,
+        "rate": 0.84,
+        "ci_low": 0.64,
+        "ci_high": 1.0
+      },
+      "said_no": {
+        "k": 1,
+        "n": 50,
+        "rate": 0.02,
+        "ci_low": 0.0,
+        "ci_high": 0.06
+      },
+      "answered": {
+        "k": 43,
+        "n": 50,
+        "rate": 0.86,
+        "ci_low": 0.66,
+        "ci_high": 1.0
+      }
+    }
+  },
+  "yes_full_minus_summary": {
+    "diff": 0.16,
+    "ci_low": 0.0,
+    "ci_high": 0.36,
+    "p_two_sided": 0.052,
+    "n_resamples": 10000,
+    "permutation_p": 0.25
+  },
+  "yes_among_answered_full_minus_summary": {
+    "diff": 0.0233,
+    "ci_low": 0.0,
+    "ci_high": 0.0732,
+    "p_two_sided": 0.6986,
+    "n_resamples": 10000,
+    "permutation_p": 1.0
+  },
+  "per_transcript_yes": {
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-13480__epoch3": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch1": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch2": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp0_k3_issue_only_v1__sympy__sympy-22914__epoch4": {
+      "full_noreason": 5,
+      "summary": 4
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch1": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch2": {
+      "full_noreason": 5,
+      "summary": 3
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch3": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-22914__epoch4": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-24443__epoch4": {
+      "full_noreason": 5,
+      "summary": 5
+    },
+    "261021_exp23_k3_full_v1__sympy__sympy-24443__epoch5": {
+      "full_noreason": 5,
+      "summary": 0
+    }
+  },
+  "unanswered_at_budget": {
+    "full_noreason": 0,
+    "summary": 7
+  },
+  "n_failed": {
+    "full_noreason": 0,
+    "summary": 0
+  }
+}
